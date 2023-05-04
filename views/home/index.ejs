@@ -1078,7 +1078,9 @@ saveBtn2.addEventListener("click", (e) => {
         videoId: videoId,
         origin: "https://f851-105-235-130-215.ngrok-free.app",
         events: {
-          'onReady': onPlayerReady
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+
         }
       });
     }
@@ -1231,7 +1233,7 @@ saveBtn2.addEventListener("click", (e) => {
     }
     // c
     
-    const socket = io.connect('https://d53d-105-235-130-215.ngrok-free.app');
+    const socket = io.connect('http://localhost:5000');
 
   socket.on('connect', () => {
     console.log('Socket.IO connection opened');
@@ -1242,7 +1244,15 @@ socket.on('message', (data) => {
   if (data.type === 'file') {
     // Update the contents of the textarea
     textEle.value = data.content;
-    
+  }
+});
+
+
+// Handle incoming messages from the server
+socket.on('message', (data) => {
+  if (data.type === 'file') {
+    // Update the contents of the textarea
+    textEle2.value = data.content;
   }
 });
 
@@ -1256,6 +1266,52 @@ textEle.addEventListener('input', () => {
   // Send the modified file contents to the server
   socket.emit('message', data);
 });
+//
+
+textEle2.addEventListener('input', () => {
+  const data = {
+    type: 'file',
+    content: textEle2.value,
+  };
+
+  // Send the modified file contents to the server
+  socket.emit('message', data);
+});
+// Initialize the YouTube Player API
+// var player = new YT.Player('player', {
+//   height: '360',
+//   width: '640',
+//   videoId: "DFw_zbcRtwo",
+//   events: {
+//     'onStateChange': onPlayerStateChange
+//   }
+// });
+
+// Handle player state change events and emit the state to the server using Socket.IO
+function onPlayerStateChange(event) {
+  var state;
+  switch (event.data) {
+    case YT.PlayerState.PLAYING:
+      state = 'playing';
+      break;
+    case YT.PlayerState.PAUSED:
+      state = 'paused';
+      break;
+    default:
+      state = 'unknown';
+  }
+  socket.emit('playerStateChange', { state: state });
+}
+
+// Listen for player state change events from the server and update the player accordingly
+socket.on('playerStateChange', function(data) {
+  if (data.state === 'playing') {
+    player.playVideo();
+  } else if (data.state === 'paused') {
+    player.pauseVideo();
+  }
+});
+
 
 
   </script>

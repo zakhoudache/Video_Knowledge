@@ -51,7 +51,7 @@ const corsOptions = {
   
   
 io.on('connection', (socket) => {
-  console.log('Client connected');
+  console.log(' connected');
 
   // Handle incoming messages from clients
   socket.on('message', (data) => {
