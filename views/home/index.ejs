@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Speakers</title>
+  <style>
+    
+  /* Text Area */
+form textarea{
+ width:480px;
+ transform:translatex(157px) translatey(83px);
+ top:-35px;
+}
+
+/* Input */
+form input[type=file]{
+ width:163px !important;
+}
+
+
+    #player {
+      display: inline-block;
+      width: 39%;
+      position: relative;
+      left: 13px;
+    }
+
+    @media (max-width:768px) {
+
+      /* Player */
+      #player {
+        margin-right: 22px;
+        width: 498px;
+      }
+
+    }
+
+    @media (min-width:768px) {
+
+      /* Player */
+      #player {
+        width: 690px;
+        margin-bottom: 0px;
+        top: 19px;
+        left: 20px;
+        margin-right: 6px;
+      }
+
+      /* Image */
+      /* img{
+  display:inline-block;
+  transform:translatex(23px) translatey(22px);
+ } */
+
+      /* Heading */
+      h1 {
+        width: 84%;
+        transform: translatex(23px) translatey(30px);
+      }
+
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #0c2461;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    button[type="submit"],
+    button {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #0c2461;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover,
+    button:hover {
+      background-color: #084174;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #f1f1f1;
+    }
+
+    textarea {
+      border: 1px solid #ccc;
+      font-size: 14px;
+      font-family: "Times New Roman", Times, serif;
+      padding: 10px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      width: 100%;
+      height: 400px;
+    }
+
+    textarea {
+      /* Adjust the size of the text area */
+      width: 25%;
+      height: 200px;
+
+      /* Add padding and border */
+      padding: 10px;
+      border: 1px solid #ccc;
+
+      /* Customize the font */
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+
+      /* Customize the background and text color */
+      background-color: #fff;
+      color: #333;
+
+      /* Add a resize handle to the bottom right corner */
+      resize: both;
+      overflow: auto;
+
+      /* Add a box shadow for a 3D effect */
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Text Area */
+    textarea {
+      transform: translatex(263px) translatey(73px);
+      min-height: 546px;
+      height: 750px;
+      width: 29%;
+      position: relative;
+      left: -23px;
+      top: -21px;
+    }
+
+    /* Button */
+    #speakerForm button {
+      width: 22%;
+      transform: translatex(314px) translatey(-49px);
+      position: relative;
+      left: 6px;
+    }
+
+    /* Speaker count */
+    #speakerCount {
+      width: 269px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #a69f9f;
+      transform: translatex(23px) translatey(0px);
+      position: relative;
+      left: 2px;
+    }
+
+    /* Speaker form */
+    #speakerForm {
+      transform: translatex(-15px) translatey(-307px);
+      width: 38%;
+      height: 54px;
+      position: relative;
+      top: -21px;
+    }
+
+    /* Num speakers */
+    #numSpeakers {
+      border-width: 1px;
+      border-color: #b1aeae;
+      margin-bottom: 1px;
+      border-style: solid;
+      width: 157px;
+      position: relative;
+      left: 14px;
+      transform: translatex(-165px) translatey(30px);
+      top: -365px;
+    }
+
+    /* Heading */
+    h1 {
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      font-weight: 500;
+      line-height: 1.13em;
+      border-left-width: 1px;
+    }
+
+    /* Image */
+    img {
+      display: inline-block;
+      transform: translatex(585px) translatey(-225px);
+      width: 120px;
+      max-width: 120px;
+      border-width: 3px;
+      border-color: #1abc9c;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      position: relative;
+      top: 2px;
+      left: -2px;
+      background-color: #faf9f9;
+      box-shadow: -3px 0px 3px 2px #d5d1d1;
+    }
+
+    /* Heading */
+    h1:nth-child(1) {
+      position: relative;
+      top: 16px;
+    }
+
+    /* Create buttons button */
+    #createButtonsButton {
+      position: relative;
+      left: 22px;
+      transform: translatex(-173px) translatey(-318px);
+      top: -17px;
+      width: 143px;
+    }
+
+    /* Label */
+    label {
+      position: relative;
+      left: 12px;
+      top: -371px;
+      width: 158px;
+      margin-bottom: 2px;
+    }
+
+    /* Heading */
+    h1:nth-child(7) {
+      position: relative;
+      top: -3px;
+    }
+
+    @media (min-width:768px) {
+
+      /* Heading */
+      h1 {
+        width: 497px;
+      }
+
+      /* Player */
+      #player {
+        left: -113px;
+        top: -340px;
+        position: relative;
+      }
+
+      /* Heading */
+      h1:nth-child(1) {
+        width: 685px;
+      }
+
+      /* Heading */
+      h1:nth-child(7) {
+        width: 329px;
+        transform: translatex(11px) translatey(-318px);
+      }
+
+    }
+
+    /* Label */
+    #buttons div:nth-child(1) label {
+      top: -1px !important;
+      bottom: auto !important;
+      left: -6px;
+    }
+
+    /* Division */
+    #buttons div:nth-child(1) {
+      transform: translatex(4px) translatey(7px);
+      display: inline-block;
+    }
+
+    /* Buttons */
+    #buttons {
+      transform: translatex(13px) translatey(-301px);
+      position: relative;
+      top: -21px;
+      left: 8px;
+      height: 148px;
+      padding-top: 28px;
+    }
+
+    /* Division */
+    #buttons>div {
+      transform: translatex(0px) translatey(7px) !important;
+      position: relative;
+      top: -23px;
+    }
+
+    /* Label */
+    #buttons div>label {
+      top: -337px !important;
+      bottom: auto !important;
+    }
+
+    /* Label */
+    #buttons div:nth-child(3) label {
+      top: 0px !important;
+      bottom: auto !important;
+      left: -4px;
+      line-height: 22px;
+    }
+
+    /* Label */
+    #buttons div>label {
+      top: 0px !important;
+      left: 0px !important;
+    }
+
+    /* Buttons */
+    #buttons {
+      min-height: 671px;
+      transform: translatex(3px) translatey(-312px);
+      height: 671px;
+      width: 55%;
+    }
+
+    /* Division */
+    #buttons div:nth-child(3) {
+      top: -52px;
+    }
+
+    /* Division */
+    #buttons div:nth-child(5) {
+      top: -81px;
+    }
+
+    /* Division */
+    #buttons div:nth-child(7) {
+      top: -111px;
+    }
+
+    /* Division */
+    #buttons div:nth-child(9) {
+      top: -148px;
+    }
+
+    /* Textarea */
+    #my-textarea {
+      transform: translatex(121px) translatey(41px);
+      width: 446px;
+      padding-right: 0px;
+    }
+
+    /* Image */
+    img {
+      top: 380px;
+    }
+
+    /* Heading */
+    h1 {
+      top: -491px !important;
+      bottom: auto !important;
+    }
+
+    /* Speaker form */
+    #speakerForm {
+      transform: translatex(5px) translatey(-795px);
+      width: 526px;
+    }
+
+    /* Speaker count */
+    #speakerCount {
+      left: -15px;
+    }
+
+    /* Button */
+    #speakerForm button {
+      left: -9px;
+    }
+
+    /* Label */
+    label {
+      top: -865px;
+    }
+
+    /* Create buttons button */
+    #createButtonsButton {
+      top: -895px;
+      transform: translatex(-173px) translatey(67px);
+    }
+
+    /* Num speakers */
+    #numSpeakers {
+      transform: translatex(-163px) translatey(-463px);
+      top: -366px;
+      left: 12px;
+    }
+
+    /* Buttons */
+    #buttons {
+      transform: translatex(-3px) translatey(-807px);
+    }
+
+    /* Button */
+    #my-form button {
+      width: 16%;
+      position: relative;
+      left: -385px;
+      transform: translatex(487px) translatey(8px);
+    }
+
+    /* Body */
+    body {
+      height: 1401px;
+    }
+
+    /* Form */
+    #my-form {
+      transform: translatex(1060px) translatey(-387px);
+      width: 563px;
+      position: relative;
+      left: 2px;
+    }
+
+    /* Heading */
+    h1:nth-child(1) {
+      top: -3px !important;
+    }
+
+    /* Player */
+    #player {
+      border-color: #0a0909;
+      border-width: 1px;
+    }
+
+    @media (min-width:768px) {
+
+      /* Player */
+      #player {
+        top: 38px;
+      }
+
+      /* Form Division */
+form{
+ transform:translatex(649px) translatey(-489px);
+ position:relative;
+ right:-123px;
+}
+
+/* Speaker count */
+#speakerCount{
+ transform:translatex(-828px) translatey(-357px);
+ left:67px;
+ position:relative;
+ top:20px;
+}
+
+/* Button */
+#speakerForm button{
+ transform:translatex(-452px) translatey(-389px);
+}
+
+
+
+/* File name */
+#fileName{
+ width:240px;
+ transform:translatex(240px) translatey(48px);
+}
+
+/* Buttons */
+#buttons{
+ transform:translatex(-3px) translatey(-783px);
+ width:647px;
+ top:-38px;
+}
+
+/* File */
+#myFile{
+ width:28%;
+ position:relative;
+ left:8px;
+ transform:translatex(236px) translatey(38px);
+ top:3px;
+}
+
+/* Speaker form */
+#speakerForm{
+ transform:translatex(649px) translatey(-489px) !important;
+}
+
+/* Body */
+body{
+ width:60%;
+}
+
+/* Form Division */
+form:nth-child(6){
+ width:808px;
+ transform:translatex(1057px) translatey(-439px);
+}
+
+/* Text */
+#text{
+ width:480px !important;
+ padding-left:11px;
+ padding-right:20px;
+}
+
+/* Heading */
+h1:nth-child(7){
+ top:-501px !important;
+ bottom:auto !important;
+}
+
+@media (min-width:768px){
+
+ /* Heading */
+ h1:nth-child(7){
+  transform:translatex(11px) translatey(-345px);
+ }
+ 
+}
+    }
+    @media (min-width:768px){
+
+
+
+/* File */
+#myFile{
+ width:250px;
+}
+
+}.form-card {
+  width: 25rem;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+}
+    /* Text */
+#text{
+ background-color:#d8e6f2;
+ color:#0f0f0f;
+ font-style:normal;
+ box-shadow:-4px 1px 9px 2px rgba(18,17,17,0.1);
+ border-style:solid;
+ border-color:#9d9494;
+}
+
+/* Form Division */
+form{
+ background-color:transparent;
+}
+
+/* File */
+#myFile{
+ min-height:24px;
+ font-size:17px;
+ background-color:transparent;
+}
+/* Save */
+#saveBtn{
+ width:7%;
+ position:relative;
+ left:9px;
+ transform:translatex(236px) translatey(38px);
+}
+/* Save */
+#saveBtn{
+ font-size:17px;
+ background-color:#0c2461;
+ color:#ffffff;
+ border-top-right-radius:6px;
+ border-top-left-radius:6px;
+ border-bottom-left-radius:6px;
+ border-bottom-right-radius:6px;
+ top:2px;
+}
+ /* Save */
+ #saveBtn{
+  width:150px;
+ }
+ /* Save */
+#saveBtn{
+ width:128px;
+}
+
+
+
+/* Button */
+#speakerForm button{
+ background-color:#0c2461;
+}
+
+@media (min-width:768px){
+
+ /* File */
+ #myFile{
+  top:5px;
+  width:314px;
+ }
+ 
+
+ 
+ body{
+  width:2047px;
+ }
+ 
+ /* Form Division */
+form{
+ width:35% !important;
+ left:173px !important;
+}
+
+/* Form Division */
+form:nth-child(6){
+ left:158px;
+ width:38% !important;
+}
+
+/* Text */
+#text{
+ left:-142px;
+}
+
+/* Form Division */
+form:nth-child(7){
+ left:177px !important;
+}
+
+/* Heading */
+h1{
+ left:28px;
+ top:-2px !important;
+ bottom:auto !important;
+ margin-bottom:10px;
+}
+
+/* Create buttons button */
+#createButtonsButton{
+ transform:translatex(-126px) translatey(-901px);
+ left:29px;
+}
+
+/* Label */
+label{
+ display:inline-block;
+ height:46px;
+ transform:translatex(35px) translatey(-976px);
+}
+
+/* Num speakers */
+#numSpeakers{
+ transform:translatex(-122px) translatey(-1426px);
+ left:7px;
+ top:-370px;
+}
+
+/* Image */
+img{
+ left:31px;
+}
+
+/* Label */
+#buttons div:nth-child(3) label{
+ transform:translatex(-4px) translatey(-20px);
+ left:11px !important;
+ right:auto !important;
+ top:11px !important;
+ bottom:auto !important;
+}
+
+/* Label */
+#buttons div:nth-child(1) label{
+ transform:translatex(12px) translatey(-11px);
+}
+
+/* Heading */
+h1:nth-child(8){
+ min-height:36px;
+ height:36px;
+}
+
+@media (min-width:768px){
+
+ /* Form Division */
+ form{
+  right:auto !important;
+ }
+ 
+ /* Form Division */
+ form:nth-child(6){
+  transform:translatex(1299px) translatey(-394px);
+ }
+ 
+ /* Form Division */
+ form:nth-child(7){
+  transform:translatex(579px) translatey(-1299px);
+  right:auto !important;
+ }
+ 
+ /* Speaker count */
+ #speakerCount{
+  transform:translatex(-842px) translatey(-1303px);
+ }
+ 
+ /* Button */
+ #speakerForm button{
+  transform:translatex(-452px) translatey(-1331px);
+ }
+ 
+ /* Player */
+ #player{
+  left:-77px;
+ }
+ 
+ /* Buttons */
+ #buttons{
+  transform:translatex(39px) translatey(-1761px);
+  top:-41px;
+ }
+ 
+ /* Heading */
+ h1:nth-child(8){
+  transform:translatex(47px) translatey(-1777px);
+  width:324px;
+ }
+ 
+ /* Body */
+ body{
+  width:2122px;
+ }
+ 
+}
+}
+@media (min-width:768px){
+
+/* Create buttons button */
+#createButtonsButton{
+ transform:translatex(27px) translatey(-934px);
+}
+
+/* Num speakers */
+#numSpeakers{
+ transform:translatex(36px) translatey(-1462px);
+}
+
+/* Form Division */
+form{
+ transform:translatex(675px) translatey(-830px) !important;
+}
+
+/* Form Division */
+form:nth-child(7){
+ transform:translatex(1403px) translatey(-400px) !important;
+}
+
+/* Form Division */
+form:nth-child(9){
+ transform:translatex(623px) translatey(-1385px) !important;
+}
+
+}
+/* Text */
+#text{
+ background-color:#ccdeef;
+}
+
+/* Form Division */
+form{
+ top:-8px !important;
+}
+
+/* Form Division */
+form:nth-child(7){
+ top:-36px !important;
+ bottom:auto !important;
+}
+/* Input */
+form input{
+ width:22% !important;
+ transform:translatex(134px) translatey(39px) !important;
+ font-size:17px !important;
+}
+
+/* Input */
+form:nth-child(9) input:nth-child(3){
+ background-color:#0f355b;
+ color:#f9f9f9;
+}
+
+/* Speaker count */
+#speakerCount{
+ display:none;
+}
+
+/* Button */
+#speakerForm button{
+ display:none;
+}
+
+@media (min-width:768px){
+
+ /* File */
+ #myFile{
+  transform:translatex(4px) translatey(39px);
+  left:11px;
+  width:43% !important;
+ }
+ 
+ /* File name */
+ #fileName{
+  transform:translatex(4px) translatey(39px);
+ }
+ 
+ /* Buttons */
+ #buttons{
+  transform:translatex(32px) translatey(-1883px);
+ }
+ 
+ /* Speaker count */
+ #speakerCount{
+  transform:translatex(-835px) translatey(-1313px) !important;
+ }
+ 
+ /* Button */
+ #speakerForm button{
+  transform:translatex(-835px) translatey(-1313px);
+ }
+ 
+ /* Heading */
+ h1{
+  position:relative;
+  top:10px !important;
+  bottom:auto !important;
+ }
+ 
+ /* Create buttons button */
+ #createButtonsButton{
+  transform:translatex(33px) translatey(-1045px);
+ }
+ 
+ /* Num speakers */
+ #numSpeakers{
+  transform:translatex(40px) translatey(-1572px);
+ }
+ 
+}
+/* Heading */
+h1{
+ padding-bottom:15px;
+ height:26px;
+}
+
+/* Buttons */
+#buttons{
+ left:55px;
+}
+
+/* Form Division */
+form{
+ top:-18px !important;
+ bottom:auto !important;
+}
+
+@media (min-width:768px){
+
+ body{
+  width:2347px;
+ }
+ 
+ /* Form Division */
+ form{
+  transform:translatex(612px) translatey(-384px) !important;
+  width:892px !important;
+ }
+ 
+ /* Form Division */
+ form:nth-child(8){
+  left:168px !important;
+  right:auto !important;
+  transform:translatex(1155px) translatey(-1348px) !important;
+ }
+ 
+ /* Heading */
+ h1{
+  top:-200px !important;
+  transform:translatex(16px) translatey(-1651px) !important;
+  bottom:auto !important;
+ }
+ 
+}
+  </style>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+
+<!-- <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script> -->
+
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <img src="<%= thumbnailUrl %>">
+  <script src="https://www.youtube.com/player_api"></script>
+
+  <!-- <iframe id="video-player" width="560" height="315" src="https://www.youtube.com/embed/<%= videoId %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+  <iframe id="player" width="640" height="360" src="https://www.youtube.com/embed/<%= videoId %>?enablejsapi=1"
+    frameborder="0" allowfullscreen=""></iframe>
+
+    <h1>Enter the number of speakers</h1>
+    <form>
+      <textarea id="text" placeholder="Transcription"></textarea>
+      <input type="text" id="fileName" placeholder="Enter File Name">
+      <input type="submit" value="Save &amp; Download" id="saveBtn">
+      <input id="myFile" type="file"/>
+    </form>
+    <h1>Enter the number of speakers</h1>
+
+    <form>
+      <textarea id="text2" placeholder="Summary"></textarea>
+      <input type="text" id="fileName2" placeholder="Enter File Name">
+      <input type="submit" value="Save &amp; Download" id="saveBtn2">
+      <input id="myFile2" type="file"/>
+    </form>
+    
+  <h1>Enter the number of speakers</h1>
+
+  <form id="speakerForm">
+    <input type="number" id="speakerCount" name="speakerCount">
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+  <!-- <label for="numSpeakers">Number of Speakers:</label> -->
+  <input type="number" id="numSpeakers" name="numSpeakers" value="2">
+  <button id="createButtonsButton" onclick="createButtons();this.disabled=true;this.style.background='grey';">Create
+    Buttons</button>
+
+  <div id="buttons"></div>
+  <div id="player"></div>
+
+  <script>
+let textEle = document.getElementById("text");
+let textEle2 = document.getElementById("text2");
+let fileNameEle = document.getElementById("fileName");
+let saveBtn2 = document.getElementById("saveBtn2");
+let fileNameEle2 = document.getElementById("fileName2");
+let saveBtn = document.getElementById("saveBtn");
+let fileEle = document.getElementById("myFile");
+let fileEle2 = document.getElementById("myFile2");
+
+fileEle.addEventListener("change", () => {
+  const file = fileEle.files[0];
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    textEle.value = event.target.result;
+    
+  };
+  reader.readAsText(file);
+});
+textEle2.addEventListener('input', (event) => {
+    const content = event.target.value;
+    console.log('Textarea content changed: ', content);
+    // send message to Socket.IO server with new content
+    socket.emit('message', content);
+  });
+
+
+fileEle2.addEventListener("change", () => {
+  const file = fileEle2.files[0];
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    textEle2.value = event.target.result;
+  };
+  reader.readAsText(file);
+});
+saveBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const textData = textEle.value;
+  const textDataBlob = new Blob([textEle.value], { type: "text/plain" });
+
+  const downloadUrl = window.URL.createObjectURL(textDataBlob)
+
+  const downloadLink = document.createElement('a');
+  downloadLink.download = fileNameEle.value
+  downloadLink.href = downloadUrl;
+  downloadLink.click()
+
+  console.log(textData);
+  console.log(textDataBlob);
+});
+
+
+saveBtn2.addEventListener("click", (e) => {
+  e.preventDefault();
+  const textData = textEle.value;
+  const textDataBlob = new Blob([textEle.value], { type: "text/plain" });
+
+  const downloadUrl = window.URL.createObjectURL(textDataBlob)
+
+  const downloadLink = document.createElement('a');
+  downloadLink.download = fileNameEle2.value
+  downloadLink.href = downloadUrl;
+  downloadLink.click()
+
+  console.log(textData);
+  console.log(textDataBlob);
+});
+    var videoId = '3jaGhfeNqPM';
+    var player;
+
+    // When the YouTube API is ready, create the player
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: videoId,
+        origin: "https://f851-105-235-130-215.ngrok-free.app",
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    // When the player is ready, add the click event listener to the button
+    function onPlayerReady(event) {
+      var button = document.getElementById('buttons');
+      button.addEventListener('click', function () {
+        var currentTime = player.getCurrentTime();
+        var timestamp = formatTime(currentTime);
+        // alert('Current timestamp: ' + formattedTime);
+      });
+    }
+    let question;
+    let answer;
+    function createButtons() {
+      const numSpeakers = document.getElementById('numSpeakers').value;
+      let buttonsHtml = '';
+      let question = '';
+      let answer = '';
+      for (let i = 1; i <= numSpeakers; i++) {
+        buttonsHtml += `
+      <div>
+        <label for="speakers${i}">Speaker ${i} Name:</label>
+        <input type="text" id="speakers${i}" name="speakers${i}">
+        <button onclick="getTimestamp(${i}, document.getElementById('speakers${i}').value)">Timestamp</button>
+        <button onclick="event.preventDefault(); const question = prompt('Enter your question:'); getQuestionTimestamp(${i}, document.getElementById('speakers${i}').value)">Question</button>
+        <button onclick="event.preventDefault(); const answer = prompt('Enter your answer:'); getAnswerTimestamp(${i}, document.getElementById('speakers${i}').value)">Answer</button>
+       
+      </div>
+      <hr>
+    `;
+      }
+      // <button onclick="getAnswerTimestamp(${i}, document.getElementById('speakers${i}').value)">Answer</button>
+      document.getElementById('buttons').innerHTML = buttonsHtml;
+      document.getElementById('numSpeakers').disabled = true;
+
+      // Add event listeners to update the current time for each timestamp button
+      const video = document.getElementById('video-player');
+      const timestampButtons = document.querySelectorAll('.timestamp-button');
+      timestampButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          var currentTime = video.currentTime.toFixed(0);
+          var timestamp = formatTime(currentTime);
+
+          const videoId = button.getAttribute('data-video-id'); // Get the video ID from the data attribute of the button
+          const speakerNumber = button.getAttribute('data-speaker');
+          const speakerName = button.getAttribute('data-speaker-name');
+          const filename = `${videoId}-${speakerName}`;
+          const timestampFolder = 'speakerT.S';
+
+          // Convert the timestamp to a human-readable format
+          const convertedTimestamp = timestamp;
+
+          // Create a new file to store the timestamp data if it does not exist
+          createTimestampsFile(filename, timestampFolder);
+
+          // Read existing timestamp data from the file
+          const data = localStorage.getItem(`${timestampFolder}/${filename}`);
+          const timestamps = JSON.parse(data) || [];
+
+          // Add the new timestamp to the data array
+          timestamps.push(convertedTimestamp);
+
+          // Write the updated timestamp data to the file
+          localStorage.setItem(`${timestampFolder}/${filename}`, JSON.stringify(timestamps));
+
+          // Log a message to indicate success
+          console.log(`New timestamp ${convertedTimestamp} added for ${speakerName} in video ${videoId}.`);
+
+          // Clear the timestamp data attribute of the button
+          button.setAttribute('data-timestamp', '');
+        });
+      });
+
+
+    }
+
+
+
+
+    function disableButton(btnId) {
+      document.getElementById(btnId).disabled = true;
+      document.getElementById(btnId).style.background = 'grey';
+    }
+
+
+    function getQuestionTimestamp(speakerNumber, speakerName) {
+      var currentTime = player.getCurrentTime();
+      var timestamp = formatTime(currentTime);
+      var question = prompt("Enter your question:");
+      console.log(`Speaker ${speakerNumber} question timestamp: ${question}  ${timestamp}`);
+      // Send the question timestamp and question to the server to be saved
+      fetch(`/api/question-timestamps/<%= videoId %>/${speakerName}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ timestamp, question })
+      })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+    }
+
+
+    function getAnswerTimestamp(speakerNumber, speakerName) {
+      var currentTime = player.getCurrentTime();
+      var timestamp = formatTime(currentTime);
+      var answer = prompt("Enter your answer:");
+      console.log(`Speaker ${speakerNumber} answer timestamp: ${answer}  ${timestamp}`);
+      // Send the question timestamp and question to the server to be saved
+      fetch(`/api/answer-timestamps/<%= videoId %>/${speakerName}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ timestamp, question, answer })
+      })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+    }
+
+
+    function getTimestamp(speakerNumber, speakerName) {
+      // const timestamp = Date.now();
+      var currentTime = player.getCurrentTime();
+      var timestamp = formatTime(currentTime);
+      console.log(`Speaker ${speakerNumber} timestamp: ${timestamp}`);
+      // Send the timestamp to the server to be saved
+      fetch(`/api/timestamps/<%= videoId %>/${speakerName}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ timestamp })
+      })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+    }
+
+    function formatTime(time) {
+      const hours = Math.floor(time / 3600);
+      const minutes = Math.floor((time - hours * 3600) / 60);
+      const seconds = Math.floor(time - hours * 3600 - minutes * 60);
+      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+     // Connect to the WebSocket server
+    }
+    // c
+    
+    const socket = io.connect('https://d53d-105-235-130-215.ngrok-free.app');
+
+  socket.on('connect', () => {
+    console.log('Socket.IO connection opened');
+  });
+
+// Handle incoming messages from the server
+socket.on('message', (data) => {
+  if (data.type === 'file') {
+    // Update the contents of the textarea
+    textEle.value = data.content;
+    
+  }
+});
+
+// Handle user input in the textarea
+textEle.addEventListener('input', () => {
+  const data = {
+    type: 'file',
+    content: textEle.value,
+  };
+
+  // Send the modified file contents to the server
+  socket.emit('message', data);
+});
+
+
+  </script>
+  <script>
+
+
+  </script>
+</body>
+
+</html>

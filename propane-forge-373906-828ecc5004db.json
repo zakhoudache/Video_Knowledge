@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "propane-forge-373906",
+  "private_key_id": "828ecc5004dbdac418d3a526534795a0b9e1d854",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDIm7OcIUKmbK42\n0qEnlBAZrPAA89IRAwSg7jaeGI4w/AGYHn6ankyI7wRXx9sDcrwNKvflHHB+i8pl\n3aNwUGqOL5Yd6ySisZ1fX5tKLmZG319GKjnOENunH8MATZfYEM5rNMMcdyZRh072\ngw3zmid53Y+NGVBE2E4TXPdWn9+tGvtj37ZolxWPRvoSEapfqGsiZX/r1TcRwPvE\nlmzB51ScSJgUoW4lYGr41Xk5D4qOZCt6bHTwfK0xA47AX7HIcXIfrlMJxjFPTjqX\nTHXd50dX4ziByLsZizPkQY4fTtZamiQCdLFa1J+eWV2gPLhsaQY27xDOORWtNkZD\nqMyBDzhBAgMBAAECggEAAu4Mj6qysQCPA3uhtpTEhBjRATU5Fl4vap71YEC75D5B\n/bPwUGzLHF2KotznN3ktAu+OOE6T3Af0TaGQ5K/f+9yjuiMi4Vdrv3wDe3ALDAeb\neh2yw24z7xBuhiob83VnYQx1DwzfG+YN2AQuUiZTDkYXSyMZV4Vl5TArPUd6JP/k\nbZs2It3BI+uJiP8f76rH3TDUqbiwjMG9y3P4CQyeAQ2LE8Ra1qUcE5K22GNioPGI\nyRKkbIDlOpVfOSzbtsO0yn1d4FfoOSx/6wCsgRisxRSZutH7c1z0gLSQodNCMcEL\nEhVEr76sLiajArG5jHtxMWZGes4YzqgDV2eokIcPEwKBgQDpwAZdlpDxIDs15xDO\nhRQhuk8sZspmZ1/c35tzpJz4swAzuUObDmNdgIPrJ2LhtBc3tcXRRyCY2sWyOdKO\nNkmjv6dWT8B5mSsMAr6mueYHovtFQB7fSYaZXTohvv2X71k8Qm7+2Y9uCXC3dNxb\nECWWi/wu+w5W3InZ31OJm6QBOwKBgQDbtBT4KKoXU4omt2tp1ukbRy6/mkFZIIRd\n1A9kXAM++wLoZa6GBJesES5cm1pHUlhCA9WfkO+QWlw5iwgb9c3hqy9R2u7Jp2mK\n/FjOcb35kJx9PYzmpC4vMKrLFcVb7MW+e8ZfMFuirHMDsMYn5yooyikTA+miZaZo\nADci10FUswKBgEK1MVveD0kxCJTOd4ZohiFF+ThTsWleEQaIreVn0gBLnUAlm/yR\nM5xIg91FJTwCWCnm7yhVYyEcNhUx2TwKlCNuG4RPSD+rjZRk6CHOpa4CPjE6JlVU\nt1vnNiLRTa/hd5bx4plKX1toyEkiyYwXZJK9KmAB98qkL5cE2+NGjpxnAoGANYRc\nR0bAiAYVdPDg/VsYVUi1nn6YxHkjRSfOyAeR0tmaD7oVFRgxSfy1amF9UDpCvXHp\nq4DGmkcoh+vSAd2SVRI56JqH6B8bmnt1tnQGbrBHLkq788KybVRRhj67YHUAhjHo\nVG+XIr0XFyMMYdPxdRYpgzREyQYxzsueoqIEi/kCgYB7RJW2XObJyob5hNF9MrAi\nezuzG1L8L+aiU2vl12FcxOo49mRaJUhfPMzdauKP/KRxUc2XIOexp+2wiqm+YjRe\ntr6qfwAQhm7vW6PtXUsVhkx5pMo6YcsjwUoAaJPTJNf0Nk9L4/yb3zzP7x8MPdNT\nQjib2g1fnszyldeh70UduA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "youtube-id@propane-forge-373906.iam.gserviceaccount.com",
+  "client_id": "106721740645460729867",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/youtube-id%40propane-forge-373906.iam.gserviceaccount.com"
+}

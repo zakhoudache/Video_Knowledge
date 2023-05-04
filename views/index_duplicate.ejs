@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Speakers</title>
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+      }
+
+      header {
+        background-color: #0c2461;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-top: 0;
+      }
+
+      img {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      input[type="number"] {
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        margin-bottom: 10px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      button[type="submit"],
+      button {
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #0c2461;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button[type="submit"]:hover,
+      button:hover {
+        background-color: #084174;
+      }
+
+      label {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        margin-bottom: 10px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 1px solid #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <img src="<%= thumbnailUrl %>">
+<iframe id="video-player" width="560" height="315" src="https://www.youtube.com/embed/<%= videoId %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- <iframe id="video-player" width="640" height="360" src="https://www.youtube.com/embed/<%= videoId %>?enablejsapi=1" frameborder="0" allowfullscreen=""></iframe> -->
+  
+<h1>Enter the number of speakers</h1>
+    <form id="speakerForm">
+      <input type="number" id="speakerCount">
+      <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+    <label for="numSpeakers">Number of Speakers:</label>
+    <input type="number" id="numSpeakers" name="numSpeakers" value="2">
+    <button id="createButtonsButton" onclick="createButtons();this.disabled=true;this.style.background='grey';">Create Buttons</button>
+    
+    <div id="buttons"></div>
+    
+
+    <script>
+ function createButtons() {
+  const numSpeakers = document.getElementById('numSpeakers').value;
+  let buttonsHtml = '';
+  for (let i = 1; i <= numSpeakers; i++) {
+    buttonsHtml += `
+      <div>
+        <label for="speakers${i}">Speaker ${i} Name:</label>
+        <input type="text" id="speakers${i}" name="speakers${i}">
+        <button onclick="getTimestamp(${i}, document.getElementById('speakers${i}').value)">Timestamp</button>
+        <button onclick="getQuestionTimestamp(${i}, document.getElementById('speakers${i}').value)">Question</button>
+      </div>
+      <hr>
+    `;
+  
+
+    }
+    document.getElementById('buttons').innerHTML = buttonsHtml;
+    document.getElementById('numSpeakers').disabled = true;
+
+    // Add event listeners to update the current time for each timestamp button
+    const video = document.getElementById('video-player');
+    const timestampButtons = document.querySelectorAll('.timestamp-button');
+    timestampButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // const currentTime = video.currentTime.toFixed(0); // Get the current time in seconds
+        const timestamp = currentTime;
+        const videoId = button.getAttribute('data-video-id'); // Get the video ID from the data attribute of the button
+        const speakerNumber = button.getAttribute('data-speaker');
+        const speakerName = button.getAttribute('data-speaker-name');
+        const filename = `${videoId}-${speakerName}`;
+        const timestampFolder = 'speakerT.S';
+
+        // Convert the timestamp to a human-readable format
+        const convertedTimestamp = new Date(timestamp * 1000).toISOString();
+
+        // Create a new file to store the timestamp data if it does not exist
+        createTimestampsFile(filename, timestampFolder);
+
+        // Read existing timestamp data from the file
+        const data = fs.readFileSync(`./timestamps/${timestampFolder}/${filename}.json`, 'utf-8');
+        const timestamps = JSON.parse(data);
+
+        // Add the new timestamp to the data array
+        timestamps.push(convertedTimestamp);
+
+        // Write the updated timestamp data to the file
+        fs.writeFileSync(`./timestamps/${timestampFolder}/${filename}.json`, JSON.stringify(timestamps));
+
+        // Log a message to indicate success
+        console.log(`New timestamp ${convertedTimestamp} added for ${speakerName} in video ${videoId}.`);
+
+        // Clear the timestamp data attribute of the button
+        button.setAttribute('data-timestamp', '');
+      });
+    });
+  }
+
+
+
+
+  function disableButton(btnId) {
+    document.getElementById(btnId).disabled = true;
+    document.getElementById(btnId).style.background = 'grey';
+  }
+
+
+  function getQuestionTimestamp(speakerNumber, speakerName) {
+      const timestamp = Date.now();
+        console.log(`Speaker ${speakerNumber} question timestamp: ${timestamp}`);
+        // Send the question timestamp to the server to be saved
+        fetch(`/api/question-timestamps/<%= videoId %>/${speakerName}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ timestamp })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));                                  
+}
+
+
+
+      function getTimestamp(speakerNumber, speakerName) {
+        const timestamp = Date.now();
+        console.log(`Speaker ${speakerNumber} timestamp: ${timestamp}`);
+        // Send the timestamp to the server to be saved
+        fetch(`/api/timestamps/<%= videoId %>/${speakerName}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ timestamp })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+      }
+
+      
+    </script>
+    <script>
+
+      
+    </script>
+  </body>
+</html>

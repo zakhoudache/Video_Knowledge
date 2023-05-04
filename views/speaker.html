@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+
+for (let i = 0; i < 1; i++) {
+  const speakerName = speakers[i].name;
+  const speakerNumber = i;
+
+  const h2 = document.createElement('h2');
+  h2.textContent = speakerName;
+  document.body.appendChild(h2);
+
+  const button = document.createElement('button');
+  button.textContent = 'Get Timestamp';
+  button.onclick = () => getTimestamp(speakerNumber, speakerName);
+  document.body.appendChild(button);
+
+  const hr = document.createElement('hr');
+  document.body.appendChild(hr);
+
+  const form = document.createElement('form');
+  form.onsubmit = (event) => saveTimestamp(event, speakerNumber, speakerName);
+  document.body.appendChild(form);
+
+  const label = document.createElement('label');
+  label.textContent = 'Timestamp:';
+  form.appendChild(label);
+
+  const input = document.createElement('input');
+  input.type = 'number';
+  input.step = '0.001';
+  input.name = 'timestamp';
+  input.required = true;
+  label.appendChild(input);
+
+  const submit = document.createElement('input');
+  submit.type = 'submit';
+  submit.value = 'Save Timestamp';
+  form.appendChild(submit);
+}
+
+function getTimestamp(speakerNumber, speakerName) {
+  fetch(`/api/timestamps/<%= videoId %>/${speakerName}`)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
+
+
+function saveTimestamp(event, speakerNumber, speakerName) {
+  event.preventDefault();
+  const timestamp = event.target.elements.timestamp.value;
+  const url = `/api/timestamps/<%= videoId %>/${encodeURIComponent(speakerName)}`;
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ timestamp })
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
+
+    </script>
+</body>
+</html>

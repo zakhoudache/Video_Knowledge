@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speaker Timeline</title>
+	<style>
+		
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #093666;
+}
+
+.form-card {
+  width: 25rem;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #404656;
+  margin-bottom: 1rem;
+}
+
+input[type='text'], textarea {
+  width: 23rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #e6ebf0;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+}
+
+input[type='submit'] {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.2rem;
+  color: #ffffff;
+  background-color: #062647;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+}
+
+input[type='submit']:hover{
+  color: #ffffff;
+  background-color: #093666;
+}
+		
+   </style>
+</head>
+<body>
+	<div class="form-card">
+  <h3>Save Text to File</h3>
+
+  <form>
+    <textarea id="text" placeholder="Enter Text"></textarea>
+    <input type="text" id="fileName" placeholder="Enter File Name">
+    <input type="submit" value="Save &amp; Download" id="saveBtn">
+    <input id="myFile" type="file"/>
+  </form>
+</div>
+
+	</body>
+	<script>
+		
+let textEle = document.getElementById("text");
+let fileNameEle = document.getElementById("fileName");
+let saveBtn = document.getElementById("saveBtn");
+let fileEle = document.getElementById("myFile");
+
+fileEle.addEventListener("change", () => {
+  const file = fileEle.files[0];
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    textEle.value = event.target.result;
+  };
+  reader.readAsText(file);
+});
+
+saveBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const textData = textEle.value;
+  const textDataBlob = new Blob([textEle.value], { type: "text/plain" });
+
+  const downloadUrl = window.URL.createObjectURL(textDataBlob)
+
+  const downloadLink = document.createElement('a');
+  downloadLink.download = fileNameEle.value
+  downloadLink.href = downloadUrl;
+  downloadLink.click()
+
+  console.log(textData);
+  console.log(textDataBlob);
+});
+	</script>
+</html>

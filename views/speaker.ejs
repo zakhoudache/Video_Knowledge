@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Speakers</title>
+  </head>
+  <body>
+    <% for (let i = 0; i < count; i++) { %>
+      <h2><%= speakers[i].name %></h2>
+      <button onclick="getTimestamp(i, '<%= speakers[i].name %>')">Get Timestamp</button>
+      <hr>
+      <form onsubmit="saveTimestamp(event, i, '<%= speakers[i].name %>')">
+        <label>
+          Timestamp:
+          <input type="number" step="0.001" name="timestamp" required>
+        </label>
+        <input type="submit" value="Save Timestamp">
+      </form>
+    <% } %>
+
+    <script>
+      function getTimestamp(speakerNumber, speakerName) {
+        
+  fetch(`/api/timestamps/<%= videoId %>/${speakerName}`)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
+
+
+function saveTimestamp(event, speakerNumber, speakerName) {
+  event.preventDefault();
+  const timestamp = event.target.elements.timestamp.value;
+  const url = `/api/timestamps/<%= videoId %>/${encodeURIComponent(speakerName)}`;
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ timestamp })
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
+
+    </script>
+  </body>
+</html>
