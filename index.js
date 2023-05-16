@@ -16,7 +16,7 @@ const ngrok = require('ngrok');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: "https://d5bf-105-96-226-253.ngrok-free.app"
+    origin: "https://zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/"
     // origin: "*"
 
   }
@@ -33,6 +33,13 @@ const youtube = google.youtube({
   version: 'v3',
   auth: auth,
 });
+
+const Trello = require('node-trello');
+
+const apiKey = '3da0322f390be3d7e919f662025de4ef';
+const apiToken = '17f2b418824687c3313817620b19cdbed33d4d9f64e75759dd40b093dab032fd';
+
+const trello = new Trello(apiKey, apiToken);
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
@@ -174,7 +181,7 @@ app.get('/', async (req, res) => {
 
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://d5bf-105-96-226-253.ngrok-free.app");
+  res.header("Access-Control-Allow-Origin", "https://zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/");
   // res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header('Content-Security-Policy: none')
@@ -399,11 +406,34 @@ app.post('/api/:location/:videoId/', (req, res) => {
   // Add the new timestamp to the data array
   timestamps.push({ event, area, hardware, timestamp });
 
-  // Write the data array to the file
+ // Write the data array to the file
   try {
     fs.writeFileSync(filename, JSON.stringify(timestamps));
+
+    // Create a Trello card
+    const cardData = {
+      name: `Timestamp: ${timestamp}`,
+      desc: `Event: ${event}\nArea: ${area}\nHardware: ${hardware}`,
+      pos: 'top', // Change the position as needed
+      idList: 'csi-tracking-tool' // Replace with the ID of your Trello list
+    };
+
+    trello.post('/1/cards', cardData, (err, card) => {
+      if (err) {
+        console.error('Error creating Trello card:', err);
+        // Handle the error and send an appropriate response to the client
+        res.status(500).json({ error: 'Error creating Trello card' });
+        return;
+      }
+
+      console.log('Trello card created:', card);
+      // Return the updated timestamp data to the client
+      res.json(timestamps);
+    });
   } catch (err) {
     console.error(`Error writing timestamp data to file ${filename}: ${err.message}`);
+    res.status(500).json({ error: 'Error writing timestamp data' });
+    return;
   }
 
   // Return the updated timestamp data to the client

@@ -2216,7 +2216,7 @@ document.addEventListener('selectionchange', () => {
 const CONTROLLER_NAME = 'zack';
 
 // Connect to the server with the user's name as a query parameter
-const socket = io.connect('https://d5bf-105-96-226-253.ngrok-free.app', { query: { name: CONTROLLER_NAME } });
+const socket = io.connect('https://zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io', { query: { name: CONTROLLER_NAME } });
 socket.on('connect', () => {
   console.log('Connected to server:', socket.id);
 });
@@ -2427,10 +2427,48 @@ myForm.addEventListener('submit', (e) => {
     body: JSON.stringify({ selectedLocation, selectedEvent, selectedArea, selectedHardware, timestamp })
   })
   .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
+  .then(data => {
+        console.log('Timestamp data:', data);
 
-  
+        // Create a Trello card using the obtained data
+        createTrelloCard(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+      function createTrelloCard(data) {
+      // Replace 'YOUR_TRELLO_API_KEY', 'YOUR_TRELLO_TOKEN', and 'YOUR_TRELLO_LIST_ID' with actual values
+      const apiKey = '3da0322f390be3d7e919f662025de4ef';
+      const token = '17f2b418824687c3313817620b19cdbed33d4d9f64e75759dd40b093dab032fd';
+      const listId = 'csi-tracking-tool';
+
+      const cardData = {
+        name: 'New Card',
+        desc: JSON.stringify(data),
+        idList: listId,
+        pos: 'top',
+        key: apiKey,
+        token: token
+      };
+
+      // Send a POST request to the Trello API to create a card
+      fetch(`https://api.trello.com/1/cards?key=${apiKey}&token=${token}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cardData)
+      })
+      .then(response => response.json())
+      .then(card => {
+        console.log('Created Trello card:', card);
+        alert('Trello card created successfully!');
+})
+.catch(error => {
+console.error('Error creating Trello card:', error);
+alert('An error occurred while creating the Trello card.');
+});
+}
 // Emit the form data to the server
 socket.emit('formSubmit', { selectedLocation, selectedEvent, selectedArea, selectedHardware, timestamp });
 
@@ -2485,7 +2523,7 @@ select.addEventListener('change', (event) => {
         height: '360',
         width: '640',
         videoId: videoId,
-        origin: "https://d5bf-105-96-226-253.ngrok-free.app",
+        origin: "https://zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/",
         events: {
           'onReady': onPlayerReady,
           // 'onStateChange': onPlayerStateChange
