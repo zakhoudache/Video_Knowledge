@@ -16,7 +16,7 @@ const ngrok = require('ngrok');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: "https://zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/"
+    origin: "https://5000-zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/"
     // origin: "*"
 
   }
@@ -181,7 +181,7 @@ app.get('/', async (req, res) => {
 
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/");
+  res.header("Access-Control-Allow-Origin", "https://5000-zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/");
   // res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header('Content-Security-Policy: none')
