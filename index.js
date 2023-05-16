@@ -16,7 +16,7 @@ const ngrok = require('ngrok');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: "https://86f6-105-235-128-57.ngrok-free.app"
+    origin: "https://d5bf-105-96-226-253.ngrok-free.app"
     // origin: "*"
 
   }
@@ -48,13 +48,13 @@ app.use(express.static(__dirname + '/public'));
 io.on('connection', function(socket) {
 
   console.log('A user connected');
+  // Receive chat messages
+  socket.on('chat message', (data) => {
+    console.log('Message received: ' + data.message);
 
-  
-  socket.on('chat message', (msg) => {
-    console.log('Message received: ' + msg);
-    io.emit('chat message', msg); // Broadcast the message to all connected clients
+    // Broadcast the message to all clients except the sender
+    socket.broadcast.emit('chat message', data);
   });
-
   // Emit the current player state to the client when they first connect
   socket.emit('playerStateChange', { state: getPlayerState() });
 
@@ -174,7 +174,7 @@ app.get('/', async (req, res) => {
 
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://86f6-105-235-128-57.ngrok-free.app");
+  res.header("Access-Control-Allow-Origin", "https://d5bf-105-96-226-253.ngrok-free.app");
   // res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header('Content-Security-Policy: none')

@@ -1843,6 +1843,9 @@ button:nth-child(11){
 #chatArea {
   height: 400px; /* Adjust the height to your desired value */
   overflow-y: auto;
+  line-height: 16px;
+  word-wrap: break-word;
+    word-break: break-word;
 }
 
 /* Styles for screens up to 600px */
@@ -1859,9 +1862,22 @@ button:nth-child(11){
 @media (min-width: 1201px) {
   /* CSS rules for large screens */
 }
+/* Message input */
+#messageInput{
+ border-top-left-radius:20px;
+ border-top-right-radius:20px;
+ border-bottom-left-radius:20px;
+ border-bottom-right-radius:20px;
+ border-style:solid;
+ border-width:1px;
+ border-color:#5d5959;
+}
+
 
   </style>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
@@ -2200,12 +2216,15 @@ document.addEventListener('selectionchange', () => {
 const CONTROLLER_NAME = 'zack';
 
 // Connect to the server with the user's name as a query parameter
-const socket = io.connect('https://86f6-105-235-128-57.ngrok-free.app', { query: { name: CONTROLLER_NAME } });
+const socket = io.connect('https://d5bf-105-96-226-253.ngrok-free.app', { query: { name: CONTROLLER_NAME } });
 socket.on('connect', () => {
   console.log('Connected to server:', socket.id);
-});const chatArea = document.getElementById('chatArea');
+});
+
+const chatArea = document.getElementById('chatArea');
 const messageInput = document.getElementById('messageInput');
 let isEventListenerBound = false; // Flag to track if the event listener is already bound
+const clientId_ = socket.id; // Assign a unique client ID using socket.id
 
 function sendMessage() {
   const message = messageInput.value;
@@ -2213,21 +2232,25 @@ function sendMessage() {
   messageElement.textContent = message;
   chatArea.appendChild(messageElement);
   chatArea.style.display = 'block';
-  socket.emit('chat message', message);
-  messageInput.value = '';
 
   // Scroll down to show the latest message
   chatArea.scrollTop = chatArea.scrollHeight;
+
+  // Emit the message with client ID
+  socket.emit('chat message', { id: clientId_, message: message });
+  messageInput.value = '';
 }
 
 // Function to bind the event listener if it's not already bound
 function bindEventListener() {
   if (!isEventListenerBound) {
-    socket.on('chat message', (msg) => {
-      const messageElement = document.createElement('p');
-      messageElement.textContent = msg;
-      chatArea.appendChild(messageElement);
-      chatArea.scrollTop = chatArea.scrollHeight; // Scroll down to show the latest message
+    socket.on('chat message', (data) => {
+      if (data.id !== clientId_) {
+        const messageElement = document.createElement('p');
+        messageElement.textContent = data.message;
+        chatArea.appendChild(messageElement);
+        chatArea.scrollTop = chatArea.scrollHeight; // Scroll down to show the latest message
+      }
     });
     isEventListenerBound = true;
   }
@@ -2462,7 +2485,7 @@ select.addEventListener('change', (event) => {
         height: '360',
         width: '640',
         videoId: videoId,
-        origin: "https://86f6-105-235-128-57.ngrok-free.app",
+        origin: "https://d5bf-105-96-226-253.ngrok-free.app",
         events: {
           'onReady': onPlayerReady,
           // 'onStateChange': onPlayerStateChange
@@ -2742,6 +2765,28 @@ socket.on('playerStateChange', function(data) {
   }
 });
 
+let isMouseDown = false;
+let offset = { x: 0, y: 0 };
+
+// Mouse down event listener
+chatArea.addEventListener('mousedown', function (event) {
+  isMouseDown = true;
+  offset.x = event.clientX - chatArea.offsetLeft;
+  offset.y = event.clientY - chatArea.offsetTop;
+});
+
+// Mouse move event listener
+document.addEventListener('mousemove', function (event) {
+  if (isMouseDown) {
+    chatArea.style.left = event.clientX - offset.x + 'px';
+    chatArea.style.top = event.clientY - offset.y + 'px';
+  }
+});
+
+// Mouse up event listener
+document.addEventListener('mouseup', function () {
+  isMouseDown = false;
+});
 // Listen for disconnect events and release control if necessary
 socket.on('disconnect', function() {
   if (isController) {

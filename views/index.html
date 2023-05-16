@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Real-Time Chat</title>
     <style>
         #floatingDiv {
             position: fixed;
@@ -17,37 +16,19 @@
     </style>
 </head>
 <body>
-    <div id="floatingDiv"></div>
-    <form id="chat-form">
-        <input id="message-input" autocomplete="off" />
-        <button>Send</button>
-    </form>
+    <input type="text" id="textInput">
+    <button onclick="displayText()">Send</button>
+    <div id="floatingDiv" class="floating-textarea"></div>></div>
 
-    <script src="/socket.io/socket.io.js"></script>
+
+    <textarea _ngcontent-ng-c207928905="" rows="1" matinput="" cdktextareaautosize="" cdkautosizeminrows="1" cdkautosizemaxrows="12" aria-label="Input for prompt text" placeholder="Enter a prompt here" class="mat-mdc-input-element cdk-textarea-autosize ng-tns-c2876826087-2 ng-valid gmat-mdc-input mat-mdc-form-field-textarea-control mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored ng-dirty ng-touched" enterkeyhint="send" maxlength="10000" id="mat-input-0" aria-invalid="false" aria-required="false" style="min-height: 15px; max-height: 180px; height: 24px;"></textarea>
     <script>
-        const socket = io();
-        const floatingDiv = document.getElementById('floatingDiv');
-
-        const messageForm = document.getElementById('chat-form');
-        const messageInput = document.getElementById('message-input');
-
-        messageForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const message = messageInput.value.trim();
-            if (message !== '') {
-                socket.emit('chat message', message);
-                messageInput.value = '';
-            }
-        });
-
-        socket.on('chat message', (msg) => {
-            floatingDiv.innerText = msg;
+        function displayText() {
+            var inputText = document.getElementById('textInput').value;
+            var floatingDiv = document.getElementById('floatingDiv');
+            floatingDiv.innerText = inputText;
             floatingDiv.style.display = 'block';
-
-            setTimeout(() => {
-                floatingDiv.style.display = 'none';
-            }, 3000);
-        });
+        }
     </script>
 </body>
 </html>
