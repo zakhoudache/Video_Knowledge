@@ -180,14 +180,23 @@ app.get('/', async (req, res) => {
 // });
 
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://5000-zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/");
-  // res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.header('Content-Security-Policy: none')
-  res.header("ngrok-skip-browser-warning", "");
+// app.use(function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "https://5000-zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io/");
+//   // res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   res.header('Content-Security-Policy: none')
+//   res.header("ngrok-skip-browser-warning", "");
+//   next();
+// });
+
+// Enable CORS for all routes
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://5000-zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
+
 
 // app.use(express.static(__dirname + 'views/home', { "MIME type": "text/html" }));
 // views\index.html
