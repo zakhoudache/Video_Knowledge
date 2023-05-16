@@ -193,8 +193,8 @@ app.get('/', async (req, res) => {
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://5000-zakhoudache-videoknowle-a19yckybohp.ws-eu97.gitpod.io');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  next();
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+next();
 });
 
 
