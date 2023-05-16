@@ -1,4 +1,5 @@
 const path = require('path')
+const { v4: uuidv4 } = require('uuid');
 
 const express = require('express');
 const app = express();
@@ -8,15 +9,20 @@ const ejs = require('ejs');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const questionTimestamps = {};
-const multer  = require('multer'); //npm install multer
+const multer = require('multer'); //npm install multer
 const upload = multer({ dest: 'uploads/' });
+const ngrok = require('ngrok');
 
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
   cors: {
-    origin: "*"
+    origin: "https://86f6-105-235-128-57.ngrok-free.app"
+    // origin: "*"
+
   }
+
 });
+
 
 const auth = new google.auth.GoogleAuth({
   keyFile: 'propane-forge-373906-828ecc5004db.json', // Replace with the path to your keyfile
@@ -31,46 +37,104 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 app.use(cors());
-const corsOptions = {
-    origin: '*' // or an array of origins
-  };
 
+  // const CONTROLLER_NAME = 'zack';
+  // let controllerSocket = null;
 
-  io.on('connection', (socket) => {
-    console.log('a user connected');
+// Serve the static files for the client-side JavaScript code
+app.use(express.static(__dirname + '/public'));
+
+// Handle client connection events
+io.on('connection', function(socket) {
+
+  console.log('A user connected');
+
   
-    socket.on('chat message', (msg) => {
-      console.log('message: ' + msg);
-      io.emit('chat message', msg);
-    });
-  
-    socket.on('disconnect', () => {
-      console.log('user disconnected');
-    });
+  socket.on('chat message', (msg) => {
+    console.log('Message received: ' + msg);
+    io.emit('chat message', msg); // Broadcast the message to all connected clients
   });
-  
-  
-io.on('connection', (socket) => {
-  console.log(' connected');
 
-  // Handle incoming messages from clients
+  // Emit the current player state to the client when they first connect
+  socket.emit('playerStateChange', { state: getPlayerState() });
+
+  // Listen for player state change events from the client and broadcast the state to all clients
+  socket.on('playerStateChange', function(data) {
+    setPlayerState(data.state);
+    io.emit('playerStateChange', { state: getPlayerState() });
+  });
+
   socket.on('message', (data) => {
-    console.log('Received message:', data);
-
-    // Broadcast the message to all connected clients (except the sender)
-    socket.broadcast.emit('message', data);
+    if (data.type === 'file') {
+      // Broadcast the file contents to all connected clients except the sender
+      socket.broadcast.emit('message', {
+        type: 'file',
+        content: data.content
+      });
+    } else if (data.type === 'file2') {
+      // Broadcast the file2 contents to all connected clients except the sender
+      socket.broadcast.emit('message', {
+        type: 'file2',
+        content: data.content
+      });
+    }
   });
-
-  socket.on('disconnect', () => {
+  // Disconnect the client when they leave the page
+  socket.on('disconnect', function() {
     console.log('Client disconnected');
   });
+
 });
 
 
 
+// Functions to get and set the player state
+var playerState = 'unknown';
+function getPlayerState() {
+  return playerState;
+}
+function setPlayerState(state) {
+  playerState = state;
+}
+// // Listen for new socket.io connections
+// io.on('connection', (socket) => {
+//   console.log(`User ${socket.id} connected`);
+
+//   // Set the user's name as a query parameter
+//   const name = socket.handshake.query.name;
+
+//   // If the user's name matches the controller name, assign the socket to the controllerSocket variable
+//   if (name === CONTROLLER_NAME) {
+//     controllerSocket = socket;
+//     console.log(`Controller ${CONTROLLER_NAME} connected`);
+//   }
+
+//   // Listen for play and pause events from the client and broadcast them to all connected sockets
+//   socket.on('play', () => {
+//     console.log(`Received play event from ${socket.id}`);
+//     io.emit('playerStateChange', { isPlaying: true });
+//   });
+
+//   socket.on('pause', () => {
+//     console.log(`Received pause event from ${socket.id}`);
+//     io.emit('playerStateChange', { isPlaying: false });
+//   });
+
+//   // Listen for disconnect events and update the controllerSocket variable if necessary
+//   socket.on('disconnect', () => {
+//     console.log(`User ${socket.id} disconnected`);
+//     if (socket === controllerSocket) {
+//       controllerSocket = null;
+//       console.log(`Controller ${CONTROLLER_NAME} disconnected`);
+//     }
+//   });
+// });
+
+// Serve static files from the public directory
+app.use(express.static('public'));
 app.use(express.static('public'));
 
-  
+
 // Set up EJS as the view engine
 app.set('view engine', 'ejs');
 
@@ -82,9 +146,9 @@ app.get('/socket.io/socket.io.js', (req, res) => {
 //   res.sendFile(__dirname + '/node_modules/socket.io-client/dist/socket.io.js');
 // });
 
-app.get('/',async (req,res)=> {
+app.get('/', async (req, res) => {
   try {
-    const videoId = "DFw_zbcRtwo";
+    const videoId = "TycPQNfZOlc";
     const { data } = await youtube.videos.list({
       id: videoId,
       part: 'snippet'
@@ -109,11 +173,12 @@ app.get('/',async (req,res)=> {
 // });
 
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://db32-105-235-128-197.ngrok-free.app/");
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://86f6-105-235-128-57.ngrok-free.app");
+  // res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header('Content-Security-Policy: none')
-  res.header("ngrok-skip-browser-warning","");
+  res.header("ngrok-skip-browser-warning", "");
   next();
 });
 
@@ -168,6 +233,34 @@ app.get('/video-info/:videoId', async (req, res) => {
     res.status(500).send('Error getting video information from YouTube API');
   }
 });
+
+//Endpoint to store event selected from the client side in JSON file
+app.post('/api/event-timestamps/:videoId/:speakerName', (req, res) => {
+  const videoId = req.params.videoId;
+  const speakerName = req.params.speakerName;
+  const { timestamp, event } = req.body;
+  console.log(req.body)
+  if (!timestamp || !event) {
+    res.status(400).json({ error: 'Timestamp or event is missing or invalid' });
+    return;
+  }
+});
+
+//Endpoint to store locattion selected from the client side in JSON file
+app.post('/api/location/:location', (req, res) => {
+  const videoId = req.params.videoId;
+  const speakerName = req.params.speakerName;
+  const { timestamp, location } = req.body;
+  console.log(req.body)
+  if (!timestamp || !location) {
+    res.status(400).json({ error: 'Timestamp or location is missing or invalid' });
+    return;
+  }
+});
+
+//client side to store locattion selected javascript c
+
+
 // Endpoint to store timestamp of question in JSON file
 app.post('/api/question-timestamps/:videoId/:speakerName', (req, res) => {
   const videoId = req.params.videoId;
@@ -196,10 +289,11 @@ app.post('/api/question-timestamps/:videoId/:speakerName', (req, res) => {
   res.json({ timestamps });
 });
 
+
 app.post('/api/answer-timestamps/:videoId/:speakerName', (req, res) => {
   const videoId = req.params.videoId;
   const speakerName = req.params.speakerName;
-  const { timestamp, answer} = req.body;
+  const { timestamp, answer } = req.body;
   console.log(req.body)
   if (!timestamp || !answer) {
     res.status(400).json({ error: 'Timestamp or question is missing or invalid' });
@@ -216,7 +310,7 @@ app.post('/api/answer-timestamps/:videoId/:speakerName', (req, res) => {
   let timestamps = JSON.parse(data);
 
   // Add new timestamp and question to speaker's array
-  timestamps.push({answer,  timestamp });
+  timestamps.push({ answer, timestamp });
 
   // Write updated data to JSON file
   fs.writeFileSync(`./timestamps/answerT.S/${videoId}-${speakerName}.json`, JSON.stringify(timestamps));
@@ -224,101 +318,128 @@ app.post('/api/answer-timestamps/:videoId/:speakerName', (req, res) => {
 });
 
 
-  function formatTime(time) {
-    const hours = Math.floor(time / 3600);
-    const minutes = Math.floor((time - hours * 3600) / 60);
-    const seconds = Math.floor(time - hours * 3600 - minutes * 60);
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-  }
+function formatTime(time) {
+  const hours = Math.floor(time / 3600);
+  const minutes = Math.floor((time - hours * 3600) / 60);
+  const seconds = Math.floor(time - hours * 3600 - minutes * 60);
+  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
 
 
 // Set up a route to get the timestamp of the current speaker
 // Set up a route to save the timestamp of the current speaker
 app.post('/api/timestamps/:videoId/:speaker', express.json(), (req, res) => {
-    const videoId ="3jaGhfeNqPM" // req.params.videoId;
-    const speaker = req.params.speaker;
-    const timestamp = req.body.timestamp;
-    const timestampFile = `${videoId}-${speaker}`;
+  const videoId = "fAOD65t1rbI" // req.params.videoId;
+  const speaker = req.params.speaker;
+  const timestamp = req.body.timestamp;
+  const timestampFile = `${videoId}-${speaker}`;
   console.log(timestamp);
-    // Convert the timestamp to a human-readable format
-    // const convertedTimestamp = new Date(timestamp * 1000).toISOString();
-  
-    // Format the timestamp as hh:mm:ss
-    const formattedTimestamp = timestamp;
-  
-    // Create a new file to store the timestamp data if it does not exist
-    createTimestampsFile(`${videoId}-${speaker}`, 'speakerT.S');
-  
-    // Read existing timestamp data from the file
-    const filename = `./timestamps/speakerT.S/${timestampFile}.json`;
-    let data = fs.readFileSync(filename, 'utf8');
-    let timestamps = JSON.parse(data);
-  
-    // Check if timestamps is an array
-    if (!Array.isArray(timestamps)) {
-      timestamps = [];
-    }
-  
-    // Add the new timestamp to the data array
-    timestamps.push(formattedTimestamp);
-  
-    // Write the data array to the file
-    try {
-      fs.writeFileSync(filename, JSON.stringify(timestamps));
-    } catch (err) {
-      console.error(`Error writing timestamp data to file ${filename}: ${err.message}`);
-    }
-  
-    // Return the updated timestamp data to the client
-    res.json(timestamps);
-  });
-  
+  // Convert the timestamp to a human-readable format
+  // const convertedTimestamp = new Date(timestamp * 1000).toISOString();
 
+  // Format the timestamp as hh:mm:ss
+  const formattedTimestamp = timestamp;
 
-  function createTimestampsFile(timestampFile, folder) {
-    const timestampFolder = `./timestamps/${folder}`;
-  
-    if (!fs.existsSync(timestampFolder)) {
-      fs.mkdirSync(timestampFolder, { recursive: true });
-    }
-  
-    const filename = `${timestampFolder}/${timestampFile}.json`;
-  
-    if (!fs.existsSync(filename)) {
-      fs.writeFileSync(filename, '[]');
-    }
+  // Create a new file to store the timestamp data if it does not exist
+  createTimestampsFile(`${videoId}-${speaker}`, 'speakerT.S');
 
-    
+  // Read existing timestamp data from the file
+  const filename = `./timestamps/speakerT.S/${timestampFile}.json`;
+  let data = fs.readFileSync(filename, 'utf8');
+  let timestamps = JSON.parse(data);
+
+  // Check if timestamps is an array
+  if (!Array.isArray(timestamps)) {
+    timestamps = [];
   }
-  
 
-  app.post('/api/create/:videoId/:speaker', (req, res) => {
-    const videoId = req.params.videoId;
-    const speaker = req.params.speaker;
-    const timestampFile = `timestamps-${videoId}-${speaker}.json`;
-    
-    // Check if the file already exists
-    if (fs.existsSync(timestampFile)) {
-      res.status(409).send('File already exists');
-    } else {
-      try {
-        // Create the file with an empty array
-        fs.writeFileSync(timestampFile, '[]');
-        res.send('File created successfully');
-      } catch (err) {
-        res.status(500).send(`Error creating file: ${err.message}`);
-      }
+  // Add the new timestamp to the data array
+  timestamps.push(formattedTimestamp);
+
+  // Write the data array to the file
+  try {
+    fs.writeFileSync(filename, JSON.stringify(timestamps));
+  } catch (err) {
+    console.error(`Error writing timestamp data to file ${filename}: ${err.message}`);
+  }
+
+  // Return the updated timestamp data to the client
+  res.json(timestamps);
+});
+
+
+
+app.post('/api/:location/:videoId/', (req, res) => {
+  const videoId = req.params.videoId;
+  const location = req.params.location;
+  const timestamp = req.body.timestamp;
+  const event = req.body.selectedEvent;
+  const area = req.body.selectedArea;
+  const hardware = req.body.selectedHardware;
+
+  const timestampFile = `${videoId}-${location}`;
+
+  console.log("Selected Location: ", location);
+  console.log("Selected Event: ", event);
+  console.log("Selected Area: ", area);
+  console.log("Selected Hardware: ", hardware);
+  console.log("Timestamp: ", timestamp);
+
+  // Create a new file to store the timestamp data if it does not exist
+  createTimestampsFile(`${videoId}-${location}`, 'eventT.S');
+
+  // Read existing timestamp data from the file or create an empty array
+  const filename = `./timestamps/eventT.S/${timestampFile}.json`;
+  let timestamps = [];
+  if (fs.existsSync(filename)) {
+    const data = fs.readFileSync(filename, 'utf8');
+    timestamps = JSON.parse(data);
+  }
+
+  // Add the new timestamp to the data array
+  timestamps.push({ event, area, hardware, timestamp });
+
+  // Write the data array to the file
+  try {
+    fs.writeFileSync(filename, JSON.stringify(timestamps));
+  } catch (err) {
+    console.error(`Error writing timestamp data to file ${filename}: ${err.message}`);
+  }
+
+  // Return the updated timestamp data to the client
+  res.json(timestamps);
+});
+
+
+
+app.post('/api/create/:videoId/:speaker', (req, res) => {
+  const videoId = req.params.videoId;
+  const speaker = req.params.speaker;
+  const timestampFile = `timestamps-${videoId}-${speaker}.json`;
+
+  // Check if the file already exists
+  if (fs.existsSync(timestampFile)) {
+    res.status(409).send('File already exists');
+  } else {
+    try {
+      // Create the file with an empty array
+      fs.writeFileSync(timestampFile, '[]');
+      res.send('File created successfully');
+    } catch (err) {
+      res.status(500).send(`Error creating file: ${err.message}`);
     }
-  });
-  
+  }
+});
 
- // handle form submission
- app.post('/save-text', (req, res) => {
+
+// handle form submission
+app.post('/save-text', (req, res) => {
   const text = req.body['textarea#my-textarea'];
   console.log(text);
   saveText(text);
   res.send('Text saved successfully!');
 });
+
 
 ///handle file upload
 app.post('/upload', (req, res) => {
@@ -339,10 +460,47 @@ app.post('/upload', (req, res) => {
   });
 });
 
+
+
+// Set up a route to serve the video ID page
+app.get('/video/RGV/:videoId', async (req, res) => {
+  try {
+    const videoId = req.params.videoId;
+    const { data } = await youtube.videos.list({
+      id: videoId,
+      part: 'snippet'
+    });
+    const video = data.items[0];
+    const title = video.snippet.title;
+    const thumbnailUrl = video.snippet.thumbnails.default.url;
+    // res.render('index', { videoId, title, thumbnailUrl });
+    res.render('home/index', { videoId, title, thumbnailUrl });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error getting video information from YouTube API');
+  }
+});
+
+
+function createTimestampsFile(timestampFile, folder) {
+  const timestampFolder = `./timestamps/${folder}`;
+
+  if (!fs.existsSync(timestampFolder)) {
+    fs.mkdirSync(timestampFolder, { recursive: true });
+  }
+
+  const filename = `${timestampFolder}/${timestampFile}.json`;
+
+  if (!fs.existsSync(filename)) {
+    fs.writeFileSync(filename, '[]');
+  }
+}
+
+
 // Start the server
 server.listen(5000, () => {
   console.log('Server listening on port 5000');
-  io.on("cnx ", function(socket) {
+  io.on("cnx ", function (socket) {
 
     console.log("user cnctd" + socket.id)
   })
