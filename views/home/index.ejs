@@ -3749,6 +3749,7 @@ button{
  }
  
 }
+
   </style>
 </head>
 <!-- <link rel="stylesheet" type="text/css" href="views/home/forms.css"> -->
@@ -4168,7 +4169,7 @@ button{
       spmtForm.appendChild(spmtSubmitBtn);
 
     // Insert the SPMT form title and submit button before the form
-    // document.body.insertBefore(formTitle.cloneNode(true), myForm);
+    document.body.insertBefore(formTitle.cloneNode(true), myForm);
     document.body.insertBefore(spmtForm, myForm);
     document.body.insertBefore(spmtSubmitBtn);
     document.body.appendChild(spmtForm);
