@@ -3593,6 +3593,162 @@ button:nth-child(31){
  }
  
 }
+
+/* Heading */
+h2{
+ transform:translatex(136px) translatey(-1894px);
+}
+
+/* Body */
+body{
+ top:61px;
+}
+
+/* Button */
+button{
+ transform:translatex(103px) translatey(-1852px) !important;
+}
+
+/* Form */
+#myForm{
+ top:-2039px !important;
+ bottom:auto !important;
+}
+
+/* Label */
+#spmtForm label:nth-child(1){
+ top:751px !important;
+ bottom:auto !important;
+ left:123px !important;
+ right:auto !important;
+}
+
+/* Spmt reference input */
+#spmtReference-input{
+ transform:translatex(117px) translatey(69px) !important;
+ left:46px;
+}
+
+/* Spmt time date input */
+#spmtTimeDate-input{
+ transform:translatex(159px) translatey(62px) !important;
+ left:3px;
+ top:38px;
+}
+
+/* Spmt payload input */
+#spmtPayload-input{
+ transform:translatex(69px) translatey(45px) !important;
+ left:19px;
+ top:45px;
+}
+
+/* Label */
+#spmtForm label:nth-child(9){
+ left:132px !important;
+ right:auto !important;
+ top:860px !important;
+ bottom:auto !important;
+}
+
+/* Spmt Unknown location */
+#spmtSelectLocation{
+ transform:translatex(9px) translatey(37px);
+ top:-11px;
+ left:23px;
+}
+
+/* Spmt destination input */
+#spmtDestination-input{
+ transform:translatex(-116px) translatey(-11px) !important;
+ left:28px;
+ top:41px;
+}
+
+/* Label */
+#spmtForm label:nth-child(7){
+ left:82px;
+ right:auto !important;
+ top:735px !important;
+ bottom:auto !important;
+}
+
+/* Label */
+#spmtForm label:nth-child(3){
+ left:106px !important;
+ right:auto !important;
+ top:773px !important;
+ bottom:auto !important;
+}
+
+/* Label */
+#spmtForm label:nth-child(5){
+ left:110px !important;
+ right:auto !important;
+ top:761px !important;
+ bottom:auto !important;
+}
+
+/* Label */
+#myForm label:nth-child(9){
+ font-weight:700;
+}
+
+/* Label */
+#myForm label:nth-child(7){
+ font-weight:700;
+}
+
+/* Label */
+#myForm label:nth-child(5){
+ font-weight:700;
+}
+
+/* Label */
+#myForm label:nth-child(3){
+ font-weight:700;
+}
+
+/* Label */
+#myForm label:nth-child(1){
+ font-weight:700;
+ left:28px !important;
+ right:auto !important;
+}
+
+@media (min-width:768px){
+
+ /* Form */
+ #myForm{
+  transform:translatex(-155px) translatey(-228px) !important;
+ }
+ 
+ /* Label */
+ #spmtForm label{
+  transform:translatex(-254px) translatey(-633px) !important;
+ }
+ 
+ /* Label */
+ #spmtForm label:nth-child(5){
+  transform:translatex(-254px) translatey(-674px) !important;
+ }
+ 
+ /* Label */
+ #spmtForm label:nth-child(7){
+  transform:translatex(-48px) translatey(-641px) !important;
+ }
+ 
+ /* Label */
+ #spmtForm label:nth-child(3){
+  transform:translatex(-364px) translatey(-687px) !important;
+ }
+ 
+ /* Label */
+ #spmtForm label:nth-child(9){
+  transform:translatex(-357px) translatey(-703px) !important;
+ }
+ 
+}
   </style>
 </head>
 <!-- <link rel="stylesheet" type="text/css" href="views/home/forms.css"> -->
@@ -4008,6 +4164,8 @@ button:nth-child(31){
     spmtSubmitBtn.textContent = 'Submit';
     spmtSubmitBtn.style =
       'background-color: #4CAF50; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;';
+
+      spmtForm.appendChild(spmtSubmitBtn);
 
     // Insert the SPMT form title and submit button before the form
     // document.body.insertBefore(formTitle.cloneNode(true), myForm);
