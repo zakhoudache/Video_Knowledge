@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  
+    h1 {
+      text-align: center;
+    }
+  
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  
+    button {
+      background-color: #4550a0;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-color: #4550a0;
+    }
+  
+    .error-message {
+      color: red;
+      margin-bottom: 10px;
+    }
+    /* Label */
+#registrationForm label:nth-child(7){
+ position:relative;
+ top:7px;
+}
+
+/* Registration form */
+#registrationForm{
+ min-height:227px;
+ transform:translatex(0px) translatey(0px);
+ width:300px;
+ max-width:428px;
+}
+
+/* Button */
+#registrationForm button{
+ position:relative;
+ top:25px;
+}
+
+/* Equipment */
+#equipment{
+ min-height:23px;
+ width:91px;
+ position:relative;
+ top:5px;
+}
+
+/* Login page button */
+#goToLoginPageButton{
+ transform:translatex(692px) translatey(-48px);
+}
+
+/* Login page button */
+#goToLoginPageButton{
+ position:relative;
+ left:10px;
+ transform:translatex(882px) translatey(-49px);
+}
+
+
+  </style>
+</head>
+<body>
+  <h1>User Registration</h1>
+  <form id="registrationForm" method="POST" action="/register">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <label for="equipment">Choose your prefered tracking equipment:</label>
+    <select id="equipment" name="equipment">
+        <option value=""></option>
+      <option value="SPMT">SPMT</option>
+      <option value="CRANES">CRANES</option>
+    </select>
+    <br>
+    <button type="submit">Register</button>
+    
+  </form>
+
+  <!-- <label for="field1">Field 1:</label>
+<input type="text" id="field1" name="field1">
+
+<label for="field2">Field 2:</label>
+<input type="text" id="field2" name="field2">
+
+  <button id="createTestButton">Create Test</button> Add the button -->'' ``
+
+  <script>
+ // Handle form submission
+const registrationForm = document.getElementById('registrationForm');
+registrationForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const formData = new FormData(registrationForm);
+
+  // Convert FormData to a plain JavaScript object
+  const formObject = {};
+  for (let [key, value] of formData.entries()) {
+    formObject[key] = value;
+  }
+
+  // Get the selected equipment from the form
+  const selectedEquipment = document.getElementById('equipment').value;
+  formObject.equipment = selectedEquipment;
+
+  try {
+    // Send the form data to the server
+    const response = await fetch('/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formObject),
+    });
+
+    if (response.ok) {
+      alert('User registered successfully');
+      // Redirect to login page or perform any other action
+    } else {
+      const errorMessage = await response.text();
+      alert(`Registration failed: ${errorMessage}`);
+    }
+  } catch (error) {
+    console.error(error);
+    alert('An error occurred during registration');
+  }
+});
+
+    // Handle createTestButton click
+    const createTestButton = document.getElementById('createTestButton');
+    createTestButton.addEventListener('click', async () => {
+      try {
+        const response = await fetch('/createTest', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ field1: 'value1', field2: 'value2' }), // Adjust the payload as needed
+        });
+
+        if (response.ok) {
+          alert('Test created successfully');
+          // Handle the response or perform any other action
+        } else {
+          const errorMessage = await response.text();
+          alert(`Test creation failed: ${errorMessage}`);
+        }
+      } catch (error) {
+        console.error(error);
+        alert('An error occurred during test creation');
+      }
+    });
+    
+  </script>
+    <button id="goToLoginPageButton">Go to Login Page</button>
+
+    <script>
+        // Handle button click to go to the login page
+        const goToLoginPageButton = document.getElementById('goToLoginPageButton');
+        goToLoginPageButton.addEventListener('click', () => {
+          window.location.href = '/'; // Redirect to the login page
+        });
+      </script>
+</body>
+</html>

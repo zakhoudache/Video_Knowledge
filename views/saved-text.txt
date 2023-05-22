@@ -1,160 +1,2649 @@
-(11926) SpaceX Falcon Heavy Launches ViaSat-3 Americas - YouTube
-https://www.youtube.com/watch?v=DFw_zbcRtwo
+    /* Text Area */
+    form textarea {
+      width: 480px;
+      transform: translatex(157px) translatey(83px);
+      top: -35px;
+    }
 
-Transcript:
-(00:12) and here we go [Music] propulsion continues to be normal our chamber pressure looks good yes 343 unfolds to go rise together back to the moon and Beyond this is [Music] foreign
-(01:20) [Music](Rayan HWeber) twice and struck by lightning it's the third time the charm for Via sat 3 we'll find out in just under an hour's time welcome everybody to nsf's coverage of the second Falcon heavy of the year live from the Kennedy Space Center in Florida joining me on country for today's broadcast you decided Adrian bio how you doing Adrian
+    /* Input */
+    form input[type=file] {
+      width: 163px !important;
+    }
+
+
+    #player {
+      display: inline-block;
+      width: 39%;
+      position: relative;
+      left: 13px;
+    }
+
+    @media (max-width:768px) {
+
+      /* Player */
+      #player {
+        margin-right: 22px;
+        width: 498px;
+      }
+
+    }
+
+    @media (min-width:768px) {
+
+      /* Player */
+      #player {
+        width: 690px;
+        margin-bottom: 0px;
+        top: 19px;
+        left: 20px;
+        margin-right: 6px;
+      }
+
+      /* Image */
+      /* img{
+  display:inline-block;
+  transform:translatex(23px) translatey(22px);
+ } */
+
+      /* Heading */
+      h1 {
+        width: 84%;
+        transform: translatex(23px) translatey(30px);
+      }
+
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #0c2461;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    button[type="submit"],
+    button {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #0c2461;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover,
+    button:hover {
+      background-color: #084174;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #f1f1f1;
+    }
+
+    textarea {
+      border: 1px solid #ccc;
+      font-size: 14px;
+      font-family: "Times New Roman", Times, serif;
+      padding: 10px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      width: 100%;
+      height: 400px;
+    }
+
+    textarea {
+      /* Adjust the size of the text area */
+      width: 25%;
+      height: 200px;
+
+      /* Add padding and border */
+      padding: 10px;
+      border: 1px solid #ccc;
+
+      /* Customize the font */
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+
+      /* Customize the background and text color */
+      background-color: #fff;
+      color: #333;
+
+      /* Add a resize handle to the bottom right corner */
+      resize: both;
+      overflow: auto;
+
+      /* Add a box shadow for a 3D effect */
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Text Area */
+    textarea {
+      transform: translatex(263px) translatey(73px);
+      min-height: 546px;
+      height: 750px;
+      width: 29%;
+      position: relative;
+      left: -23px;
+      top: -21px;
+    }
+
+    /* Button */
+    #speakerForm button {
+      width: 22%;
+      transform: translatex(314px) translatey(-49px);
+      position: relative;
+      left: 6px;
+    }
+
+    /* Speaker count */
+    #speakerCount {
+      width: 269px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #a69f9f;
+      transform: translatex(23px) translatey(0px);
+      position: relative;
+      left: 2px;
+    }
+
+    /* Speaker form */
+    #speakerForm {
+      transform: translatex(-15px) translatey(-307px);
+      width: 38%;
+      height: 54px;
+      position: relative;
+      top: -21px;
+    }
+
+    /* Num speakers */
+    #numSpeakers {
+      border-width: 1px;
+      border-color: #b1aeae;
+      margin-bottom: 1px;
+      border-style: solid;
+      width: 29px;
+      position: relative;
+      left: 14px;
+      transform: translatex(-165px) translatey(30px);
+      top: -365px;
+    }
+
+    /* Heading */
+    h1 {
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      font-weight: 500;
+      line-height: 1.13em;
+      border-left-width: 1px;
+    }
+
+    /* Image */
+    img {
+      display: inline-block;
+      transform: translatex(585px) translatey(-225px);
+      width: 120px;
+      max-width: 120px;
+      border-width: 3px;
+      border-color: #1abc9c;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      position: relative;
+      top: 2px;
+      left: -2px;
+      background-color: #faf9f9;
+      box-shadow: -3px 0px 3px 2px #d5d1d1;
+    }
+
+    /* Heading */
+    h1:nth-child(1) {
+      position: relative;
+      top: 16px;
+    }
+
+    /* Create buttons button */
+    #createButtonsButton {
+      position: relative;
+      left: 22px;
+      transform: translatex(-173px) translatey(-318px);
+      top: -17px;
+      width: 143px;
+    }
+
+    /* Label */
+    label {
+      position: relative;
+      left: 12px;
+      top: -371px;
+      width: 158px;
+      margin-bottom: 2px;
+    }
+
+    /* Heading */
+    h1:nth-child(7) {
+      position: relative;
+      top: -3px;
+    }
+
+    @media (min-width:768px) {
+
+      /* Heading */
+      h1 {
+        width: 497px;
+      }
+
+      /* Player */
+      #player {
+        left: -113px;
+        top: -340px;
+        position: relative;
+      }
+
+      /* Heading */
+      h1:nth-child(1) {
+        width: 685px;
+      }
+
+      /* Heading */
+      h1:nth-child(7) {
+        width: 329px;
+        transform: translatex(11px) translatey(-318px);
+      }
+
+    }
+
+    /* Label */
+    #buttons div:nth-child(1) label {
+      top: -1px !important;
+      bottom: auto !important;
+      left: -6px;
+    }
+
+    /* Division */
+    #buttons div:nth-child(1) {
+      transform: translatex(4px) translatey(7px);
+      display: inline-block;
+    }
+
+    /* Buttons */
+    #buttons {
+      transform: translatex(13px) translatey(-301px);
+      position: relative;
+      top: -21px;
+      left: 8px;
+      height: 148px;
+      padding-top: 28px;
+    }
+
+    /* Division */
+    #buttons>div {
+      transform: translatex(0px) translatey(7px) !important;
+      position: relative;
+      top: -23px;
+    }
+
+    /* Label */
+    #buttons div>label {
+      top: -337px !important;
+      bottom: auto !important;
+    }
+
+    /* Label */
+    #buttons div:nth-child(3) label {
+      top: 0px !important;
+      bottom: auto !important;
+      left: -4px;
+      line-height: 22px;
+    }
+
+    /* Label */
+    #buttons div>label {
+      top: 0px !important;
+      left: 0px !important;
+    }
+
+    /* Buttons */
+    #buttons {
+      min-height: 671px;
+      transform: translatex(3px) translatey(-312px);
+      height: 671px;
+      width: 55%;
+    }
+
+    /* Division */
+    #buttons div:nth-child(3) {
+      top: -52px;
+    }
+
+    /* Division */
+    #buttons div:nth-child(5) {
+      top: -81px;
+    }
+
+    /* Division */
+    #buttons div:nth-child(7) {
+      top: -111px;
+    }
+
+    /* Division */
+    #buttons div:nth-child(9) {
+      top: -148px;
+    }
+
+    /* Textarea */
+    #my-textarea {
+      transform: translatex(121px) translatey(41px);
+      width: 446px;
+      padding-right: 0px;
+    }
+
+    /* Image */
+    img {
+      top: 380px;
+    }
+
+    /* Heading */
+    h1 {
+      top: -491px !important;
+      bottom: auto !important;
+    }
+
+    /* Speaker form */
+    #speakerForm {
+      transform: translatex(5px) translatey(-795px);
+      width: 526px;
+    }
+
+    /* Speaker count */
+    #speakerCount {
+      left: -15px;
+    }
+
+    /* Button */
+    #speakerForm button {
+      left: -9px;
+    }
+
+    /* Label */
+    label {
+      top: -865px;
+    }
+
+    /* Create buttons button */
+    #createButtonsButton {
+      top: -895px;
+      transform: translatex(-173px) translatey(67px);
+    }
+
+    /* Num speakers */
+    #numSpeakers {
+      transform: translatex(-163px) translatey(-463px);
+      top: -366px;
+      left: 12px;
+    }
+
+    /* Buttons */
+    #buttons {
+      transform: translatex(-3px) translatey(-807px);
+    }
+
+    /* Button */
+    #my-form button {
+      width: 16%;
+      position: relative;
+      left: -385px;
+      transform: translatex(487px) translatey(8px);
+    }
+
+    /* Body */
+    body {
+      height: 1401px;
+    }
+
+    /* Form */
+    #my-form {
+      transform: translatex(1060px) translatey(-387px);
+      width: 563px;
+      position: relative;
+      left: 2px;
+    }
+
+    /* Heading */
+    h1:nth-child(1) {
+      top: -3px !important;
+    }
+
+    /* Player */
+    #player {
+      border-color: #0a0909;
+      border-width: 1px;
+    }
+
+    @media (min-width:768px) {
+
+      /* Player */
+      #player {
+        top: 38px;
+      }
+
+      /* Form Division */
+      form {
+        transform: translatex(649px) translatey(-489px);
+        position: relative;
+        right: -123px;
+      }
+
+      /* Speaker count */
+      #speakerCount {
+        transform: translatex(-828px) translatey(-357px);
+        left: 67px;
+        position: relative;
+        top: 20px;
+      }
+
+      /* Button */
+      #speakerForm button {
+        transform: translatex(-452px) translatey(-389px);
+      }
+
+
+
+      /* File name */
+      #fileName {
+        width: 240px;
+        transform: translatex(240px) translatey(48px);
+      }
+
+      /* Buttons */
+      #buttons {
+        transform: translatex(-3px) translatey(-783px);
+        width: 647px;
+        top: -38px;
+      }
+
+      /* File */
+      #myFile {
+        width: 28%;
+        position: relative;
+        left: 8px;
+        transform: translatex(236px) translatey(38px);
+        top: 3px;
+      }
+
+      /* Speaker form */
+      #speakerForm {
+        transform: translatex(649px) translatey(-489px) !important;
+      }
+
+      /* Body */
+      body {
+        width: 60%;
+      }
+
+      /* Form Division */
+      form:nth-child(6) {
+        width: 808px;
+        transform: translatex(1057px) translatey(-439px);
+      }
+
+      /* Text */
+      #text {
+        width: 480px !important;
+        padding-left: 11px;
+        padding-right: 20px;
+      }
+
+      /* Heading */
+      h1:nth-child(7) {
+        top: -501px !important;
+        bottom: auto !important;
+      }
+
+      @media (min-width:768px) {
+
+        /* Heading */
+        h1:nth-child(7) {
+          transform: translatex(11px) translatey(-345px);
+        }
+
+      }
+    }
+
+    @media (min-width:768px) {
+
+
+
+      /* File */
+      #myFile {
+        width: 250px;
+      }
+
+    }
+
+    .form-card {
+      width: 25rem;
+      gap: 1rem;
+      background-color: #ffffff;
+      border-radius: 0.3rem;
+      padding: 1.5rem;
+    }
+
+    /* Text */
+    #text {
+      background-color: #d8e6f2;
+      color: #0f0f0f;
+      font-style: normal;
+      box-shadow: -4px 1px 9px 2px rgba(18, 17, 17, 0.1);
+      border-style: solid;
+      border-color: #9d9494;
+    }
+
+    /* Form Division */
+    form {
+      background-color: transparent;
+    }
+
+    /* File */
+    #myFile {
+      min-height: 24px;
+      font-size: 17px;
+      background-color: transparent;
+    }
+
+    /* Save */
+    #saveBtn {
+      width: 7%;
+      position: relative;
+      left: 9px;
+      transform: translatex(236px) translatey(38px);
+    }
+
+    /* Save */
+    #saveBtn {
+      font-size: 17px;
+      background-color: #0c2461;
+      color: #ffffff;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      top: 2px;
+    }
+
+    /* Save */
+    #saveBtn {
+      width: 150px;
+    }
+
+    /* Save */
+    #saveBtn {
+      width: 128px;
+    }
+
+
+
+    /* Button */
+    #speakerForm button {
+      background-color: #0c2461;
+    }
+
+    @media (min-width:768px) {
+
+      /* File */
+      #myFile {
+        top: 5px;
+        width: 314px;
+      }
+
+
+
+      body {
+        width: 2047px;
+      }
+
+      /* Form Division */
+      form {
+        width: 35% !important;
+        left: 173px !important;
+      }
+
+      /* Form Division */
+      form:nth-child(6) {
+        left: 158px;
+        width: 38% !important;
+      }
+
+      /* Text */
+      #text {
+        left: -142px;
+      }
+
+      /* Form Division */
+      form:nth-child(7) {
+        left: 177px !important;
+      }
+
+      /* Heading */
+      h1 {
+        left: 28px;
+        top: -2px !important;
+        bottom: auto !important;
+        margin-bottom: 10px;
+      }
+
+      /* Create buttons button */
+      #createButtonsButton {
+        transform: translatex(-126px) translatey(-901px);
+        left: 29px;
+      }
+
+      /* Label */
+      label {
+        display: inline-block;
+        height: 46px;
+        transform: translatex(35px) translatey(-976px);
+      }
+
+      /* Num speakers */
+      #numSpeakers {
+        transform: translatex(-122px) translatey(-1426px);
+        left: 7px;
+        top: -370px;
+      }
+
+      /* Image */
+      img {
+        left: 31px;
+      }
+
+      /* Label */
+      #buttons div:nth-child(3) label {
+        transform: translatex(-4px) translatey(-20px);
+        left: 11px !important;
+        right: auto !important;
+        top: 11px !important;
+        bottom: auto !important;
+      }
+
+      /* Label */
+      #buttons div:nth-child(1) label {
+        transform: translatex(12px) translatey(-11px);
+      }
+
+      /* Heading */
+      h1:nth-child(8) {
+        min-height: 36px;
+        height: 36px;
+      }
+
+      @media (min-width:768px) {
+
+        /* Form Division */
+        form {
+          right: auto !important;
+        }
+
+        /* Form Division */
+        form:nth-child(6) {
+          transform: translatex(1299px) translatey(-394px);
+        }
+
+        /* Form Division */
+        form:nth-child(7) {
+          transform: translatex(579px) translatey(-1299px);
+          right: auto !important;
+        }
+
+        /* Speaker count */
+        #speakerCount {
+          transform: translatex(-842px) translatey(-1303px);
+        }
+
+        /* Button */
+        #speakerForm button {
+          transform: translatex(-452px) translatey(-1331px);
+        }
+
+        /* Player */
+        #player {
+          left: -77px;
+        }
+
+        /* Buttons */
+        #buttons {
+          transform: translatex(39px) translatey(-1761px);
+          top: -41px;
+        }
+
+        /* Heading */
+        h1:nth-child(8) {
+          transform: translatex(47px) translatey(-1777px);
+          width: 324px;
+        }
+
+        /* Body */
+        body {
+          width: 2122px;
+        }
+
+      }
+    }
+
+    @media (min-width:768px) {
+
+      /* Create buttons button */
+      #createButtonsButton {
+        transform: translatex(27px) translatey(-934px);
+      }
+
+      /* Num speakers */
+      #numSpeakers {
+        transform: translatex(36px) translatey(-1462px);
+      }
+
+      /* Form Division */
+      form {
+        transform: translatex(675px) translatey(-830px) !important;
+      }
+
+      /* Form Division */
+      form:nth-child(7) {
+        transform: translatex(1403px) translatey(-400px) !important;
+      }
+
+      /* Form Division */
+      form:nth-child(9) {
+        transform: translatex(623px) translatey(-1385px) !important;
+      }
+
+    }
+
+    /* Text */
+    #text {
+      background-color: #ccdeef;
+    }
+
+    /* Form Division */
+    form {
+      top: -8px !important;
+    }
+
+    /* Form Division */
+    form:nth-child(7) {
+      top: -36px !important;
+      bottom: auto !important;
+    }
+
+    /* Input */
+    form input {
+      width: 22% !important;
+      transform: translatex(134px) translatey(39px) !important;
+      font-size: 17px !important;
+    }
+
+    /* Input */
+    form:nth-child(9) input:nth-child(3) {
+      background-color: #0f355b;
+      color: #f9f9f9;
+    }
+
+    /* Speaker count */
+    #speakerCount {
+      display: none;
+    }
+
+    /* Button */
+    #speakerForm button {
+      display: none;
+    }
+
+    @media (min-width:768px) {
+
+      /* File */
+      #myFile {
+        transform: translatex(4px) translatey(39px);
+        left: 11px;
+        width: 43% !important;
+      }
+
+      /* File name */
+      #fileName {
+        transform: translatex(4px) translatey(39px);
+      }
+
+      /* Buttons */
+      #buttons {
+        transform: translatex(32px) translatey(-1883px);
+      }
+
+      /* Speaker count */
+      #speakerCount {
+        transform: translatex(-835px) translatey(-1313px) !important;
+      }
+
+      /* Button */
+      #speakerForm button {
+        transform: translatex(-835px) translatey(-1313px);
+      }
+
+      /* Heading */
+      h1 {
+        position: relative;
+        top: 10px !important;
+        bottom: auto !important;
+      }
+
+      /* Create buttons button */
+      #createButtonsButton {
+        transform: translatex(33px) translatey(-1045px);
+      }
+
+      /* Num speakers */
+      #numSpeakers {
+        transform: translatex(40px) translatey(-1572px);
+      }
+
+    }
+
+    /* Heading */
+    h1 {
+      padding-bottom: 15px;
+      height: 26px;
+    }
+
+    /* Buttons */
+    #buttons {
+      left: 55px;
+    }
+
+    /* Form Division */
+    form {
+      top: -18px !important;
+      bottom: auto !important;
+    }
+
+    @media (min-width:768px) {
+
+      body {
+        width: 2347px;
+      }
+
+      /* Form Division */
+      form {
+        transform: translatex(612px) translatey(-384px) !important;
+        width: 892px !important;
+      }
+
+      /* Form Division */
+      form:nth-child(8) {
+        left: 168px !important;
+        right: auto !important;
+        transform: translatex(1155px) translatey(-1348px) !important;
+      }
+
+      /* Heading */
+      h1 {
+        top: -200px !important;
+        transform: translatex(16px) translatey(-1651px) !important;
+        bottom: auto !important;
+      }
+
+    }
+    #Qbtn, #Abtn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+}
+
+    .tag-btn {
+      position: absolute;
+      display: none;
+    }
+  
+/* Qbtn */
+
+/* Abtn */
+#Abtn{
+ height:50px;
+ width:80px;
+ transform:translatex(-531px) translatey(14px);
+}
+
+/* Qbtn */
+#Qbtn{
+ top:23px !important;
+ bottom:auto !important;
+
+ left:-1px !important;
+ right:auto !important;
+ height:50px;
+ transform:translatex(1319px) translatey(134px);
+ width:80px;
+ 
+
+
+}
+
+/* Abtn */
+#Abtn{
+ top:1000px !important;
+ bottom:-158px;
+ left:-101px !important;
+ right:-173px;
+ max-width:24px;
+ min-width:99px;
+ transform:translatex(1419px) translatey(-790px);
+ width:931px;
+}
+  
+.tag {
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+    /* Tag */
+textarea#text .tag{
+ position:relative;
+ top:-6px;
+}
+#editor {
+			height: 200px;
+			width: 500px;
+			border: 1px solid black;
+			padding: 10px;
+		}
+/* Tag btn2 */
+.tag-btn2{
+ transform:translatex(1208px) translatey(-3116px);
+ position:relative;
+ top:-45px !important;
+ bottom:auto !important;
+ min-width:66px;
+ width:66px !important;
+ min-height:56px;
+}
+
+/* Tag btn2 */
+.tag-btn2:nth-child(18){
+ transform:translatex(1266px) translatey(-3077px);
+ top:4px;
+}
+
+/* Tag btn2 */
+.tag-btn2:nth-child(19){
+ transform:translatex(1201px) translatey(-3023px);
+ left:-5px;
+ top:-40px !important;
+ bottom:auto !important;
+}
+
+/* Abtn */
+#Abtn{
+ width:99px;
+ max-width:69px;
+ min-width:80px;
+}
+/* Select location */
+#selectLocation{
+ position:relative;
+ padding-bottom:3px;
+ left:-600px;
+ top:-2230px;
+ width:118px !important;
+ /* transform:translatex(-605px) translatey(-459px); */
+ /* transform:translatex(-298px) translatey(-463px); */
+ transform:translatex(-317px) translatey(-466px);
+
+
+}
+/* Hrdware */
+/* #Hrdware-btn{
+ transform:translatex(-541px) translatey(-2695px);
+} */
+
+/* Area */
+/* #Area-btn{
+ position:relative;
+ transform:translatex(-387px) translatey(-1793px);
+ left:-31px;
+ top:-994px;
+} */
+
+/* Evnt */
+/* #Evnt-btn{ */
+ /* position:relative; */
+ /* top:-1900px; */
+ /* left:416px; */
+ /* transform:translatex(-344px) translatey(-843px); */
+ /* transform:translatex(-743px) translatey(-1575px);
+ position:relative;
+ top:-1166px;
+ width:100px;
+} */
+
+/* Evnt input */
+/* #Evnt-input{
+ transform:translatex(-771px) translatey(-2745px);
+ width:98px;
+ position:relative;
+ left:-23px;
+ top:5px;
+} */
+
+/* Area input */
+/* #Area-input{
+ transform:translatex(-888px) translatey(-2786px);
+ width:98px;
+ position:relative;
+ left:-27px;
+} */
+
+/* Hrdware input */
+/* #Hrdware-input{
+ transform:translatex(-1031px) translatey(3px);
+ position:relative;
+ top:-2697px;
+ width:98px;
+ left:-9px;
+} */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-input label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-input input[type="text"] {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.form-select {
+  margin: 10px;
+}
+
+.form-select label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.form-select select {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-submit {
+  margin: 10px;
+}
+
+.form-submit input[type="submit"] {
+  width: 100px;
+  height: 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.form-submit input[type="submit"]:hover {
+  background-color: #5d765e;
+}
+
+.form-label {
+  margin-bottom: 5px;
+}
+/* Select location */
+#selectLocation{
+ top:5px;
+ left:-328px;
+ transform:translatex(462px) translatey(-33px);
+ width:134px !important;
+ height:40px !important;
+ border-style:solid !important;
+ border-width:1px !important;
+}
+
+/* Form */
+#myForm{
+ height:190px;
+ padding-left:24px;
+ top:-1991px !important;
+ bottom:auto !important;
+ border-width:1px;
+ border-style:solid;
+ border-color:#8d8181;
+ box-shadow:6px 1px 0px -5px #a29e9e;
+ background-color:#d8e2e8;
+}
+
+/* Button */
+#myForm button{
+ width:22%;
+ transform:translatex(258px) translatey(-262px);
+ height:39px !important;
+ min-height:110px;
+ box-shadow:0px 0px 1px 1px #070707;
+ position:relative;
+ left:15px;
+}
+
+/* Label */
+#myForm label{
+ left:34px !important;
+ width:129px;
+ top:-878px !important;
+ min-height:28px;
+ padding-left:1px;
+}
+
+/* Event input */
+#Event-input{
+ position:relative;
+ top:-17px;
+ transform:translatex(143px) translatey(-40px) !important;
+ width:104px !important;
+ left:-7px;
+ border-style:dotted;
+ border-width:1px;
+}
+
+/* Hardware input */
+#Hardware-input{
+ position:relative;
+ top:-1px;
+ left:4px;
+ transform:translatex(131px) translatey(-129px) !important;
+ width:104px !important;
+ border-style:dotted;
+ border-width:1px;
+}
+
+/* Label */
+#myForm label:nth-child(3){
+ left:30px !important;
+ right:auto !important;
+ top:-877px !important;
+ bottom:auto !important;
+}
+
+/* Area input */
+#Area-input{
+ transform:translatex(132px) translatey(-103px) !important;
+ position:relative;
+ left:4px;
+ width:104px !important;
+ top:9px;
+ border-style:dotted;
+ border-width:1px;
+}
+
+/* Label */
+#myForm label:nth-child(1){
+ top:-876px !important;
+ left:49px;
+ bottom:auto !important;
+}
+
+/* Label */
+#myForm label:nth-child(7){
+ left:27px !important;
+ right:auto !important;
+ top:-889px !important;
+ bottom:auto !important;
+}
+
+/* Label */
+#myForm label:nth-child(5){
+ left:32px !important;
+ right:auto !important;
+ top:-872px !important;
+ bottom:auto !important;
+}
+
+/* Text */
+#text{
+ height:576px;
+ top:-7px;
+ transform:translatex(157px) translatey(7px) !important;
+}
+
+/* Create buttons button */
+#createButtonsButton{
+ top:-893px;
+}
+
+/* Form Division */
+form{
+ top:19px !important;
+ bottom:auto !important;
+}
+
+/* Form Division */
+form:nth-child(6){
+ top:6px !important;
+ bottom:auto !important;
+ height:770px;
+}
+
+/* File name */
+#fileName{
+ position:relative;
+ left:-116px;
+ top:-45px;
+ border-style:dotted;
+ border-width:1px;
+}
+
+/* Save */
+#saveBtn{
+ left:-12px;
+ transform:translatex(32px) translatey(4px) !important;
+ width:150px !important;
+ top:-16px;
+}
+
+/* Text Area */
+form:nth-child(8) textarea{
+ left:-65px;
+ min-height:524px;
+ height:639px;
+}
+
+/* Tag btn2 */
+.tag-btn2{
+ top:-39px !important;
+ bottom:auto !important;
+ transform:translatex(1224px) translatey(-2896px) !important;
+ left:-21px;
+}
+
+/* Text Area */
+form textarea{
+ min-height:626px !important;
+ transform:translatex(118px) translatey(115px) !important;
+}
+
+/* Qbtn */
+#Qbtn{
+ width:59px;
+ left:-14px !important;
+ right:auto !important;
+ top:-3px !important;
+ bottom:auto !important;
+ transform:translatex(1323px) translatey(111px);
+}
+
+/* Abtn */
+#Abtn{
+ width:59px !important;
+ max-width:80px;
+ min-width:59px;
+ left:-117px !important;
+ right:auto !important;
+ transform:translatex(1427px) translatey(-826px);
+ top:995px !important;
+ bottom:auto !important;
+}
+
+/* Tag btn2 */
+.tag-btn2:nth-child(18){
+ width:59px !important;
+ min-width:53px;
+ left:-39px;
+}
+
+/* Tag btn2 */
+.tag-btn2:nth-child(19){
+ min-width:52px;
+ width:59px !important;
+ transform:translatex(1153px) translatey(-2829px) !important;
+ top:-45px !important;
+ bottom:auto !important;
+ left:-31px;
+}
+
+/* Input */
+form:nth-child(8) input:nth-child(3){
+ position:relative;
+ left:-7px;
+ transform:translatex(63px) translatey(56px) !important;
+ top:4px;
+}
+
+/* Input */
+form:nth-child(8) input[type=file]{
+ position:relative;
+ top:27px;
+ left:-76px;
+ width:307px !important;
+ max-width:302px;
+}
+
+/* Input */
+form:nth-child(8) input[type=text]{
+ position:relative;
+ top:26px;
+ transform:translatex(56px) translatey(40px) !important;
+ border-width:1px;
+ border-style:dotted;
+}
+
+/* Input */
+form input[type=text]{
+ border-style:solid;
+ border-width:0px;
+}
+
+/* Input */
+form input[type=file]{
+ width:160px !important;
+ max-width:242px;
+}
+
+@media (min-width:768px){
+
+ /* Form */
+ #myForm{
+  width:370px !important;
+  left:136px !important;
+  right:auto !important;
+  transform:translatex(644px) translatey(-228px) !important;
+ }
+ 
+ /* Label */
+ #myForm label{
+  transform:translatex(-38px) translatey(823px);
+  height:26px !important;
+ }
+ 
+ /* Label */
+ #myForm label:nth-child(5){
+  transform:translatex(-40px) translatey(862px);
+ }
+ 
+ /* Label */
+ #myForm label:nth-child(3){
+  transform:translatex(-38px) translatey(903px);
+ }
+ 
+ /* Label */
+ #myForm label:nth-child(7){
+  transform:translatex(-34px) translatey(705px);
+ }
+ 
+ /* Buttons */
+ #buttons{
+  top:40px;
+  transform:translatex(-20px) translatey(-1769px);
+ }
+ 
+ /* Heading */
+ h1{
+  top:5px !important;
+  bottom:auto !important;
+ }
+ 
+ /* Num speakers */
+ #numSpeakers{
+  top:-356px;
+  transform:translatex(37px) translatey(-1393px);
+ }
+ 
+ /* Create buttons button */
+ #createButtonsButton{
+  transform:translatex(22px) translatey(-855px);
+ }
+ 
+ /* Form Division */
+ form{
+  width:743px !important;
+  transform:translatex(346px) translatey(86px) !important;
+ }
+ 
+ /* Form Division */
+ form:nth-child(6){
+  width:583px !important;
+  transform:translatex(602px) translatey(-409px) !important;
+ }
+ 
+ /* File */
+ #myFile{
+  left:-113px;
+  top:-46px;
+ }
+ 
+ /* File name */
+ #fileName{
+  width:150px !important;
+ }
+ 
+ /* Label */
+ #myForm label:nth-child(1){
+  transform:translatex(-44px) translatey(890px);
+ }
+ 
+}
+/* Label */
+#myForm label:nth-child(5){
+ left:36px !important;
+ right:auto !important;
+}
+
+/* Label */
+#myForm label:nth-child(7){
+ left:30px !important;
+ right:auto !important;
+}
+
+/* Label */
+#myForm label:nth-child(3){
+ top:-873px !important;
+ bottom:auto !important;
+}
+
+@media (min-width:768px){
+
+ /* Label */
+ #myForm label:nth-child(7){
+  transform:translatex(-42px) translatey(799px);
+ }
+ 
+ /* Label */
+ #myForm label:nth-child(3){
+  transform:translatex(-40px) translatey(855px);
+ }
+ 
+ /* Label */
+ #myForm label:nth-child(5){
+  transform:translatex(-47px) translatey(819px);
+ }
+ 
+}
+
+.stream-deck {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 400px;
+  height: 200px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.stream-deck__key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.stream-deck__key:hover {
+  background-color: #555;
+}
+
+.stream-deck__key--1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.stream-deck__key--2 {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.stream-deck__key--3 {
+  grid-column: 5 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.stream-deck__key--4 {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.stream-deck__key--5 {
+  grid-column: 3 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.stream-deck__key--6 {
+  grid-column: 5 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.stream-deck__key--7 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.stream-deck__key--8 {
+  grid-column: 6 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.stream-deck__key--9 {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.stream-deck__key--10 {
+  grid-column: 6 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.stream-deck__key--11 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.stream-deck__key--12 {
+  grid-column: 5 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.stream-deck__key__label {
+  margin: auto;
+}
+
+
+/* Stream deck */
+.stream-deck{
+ transform:translatex(101px) translatey(47px);
+ min-height:246px;
+ width:559px;
+ position:relative;
+ left:-9px;
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(7){
+ width:49px;
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(11){
+ width:61px;
+ transform:translatex(23px) translatey(0px);
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(1){
+ width:58px;
+ transform:translatex(45px) translatey(3px);
+ position:relative;
+ left:10px;
+ top:-2px;
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(2){
+ transform:translatex(0px) translatey(0px);
+ width:82px;
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(9){
+ transform:translatex(0px) translatey(0px);
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(4){
+ width:88px;
+ transform:translatex(92px) translatey(0px);
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(3){
+ transform:translatex(-98px) translatey(4px);
+ width:89px;
+ position:relative;
+ top:-4px;
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(10){
+ transform:translatex(3px) translatey(-4px);
+ position:relative;
+ top:4px;
+ left:-4px;
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key:nth-child(6){
+ width:83px;
+}
+
+/* Form */
+#myForm{
+ top:-2051px !important;
+ bottom:auto !important;
+ border-top-left-radius:10px;
+ border-bottom-right-radius:10px;
+ border-bottom-left-radius:10px;
+ border-top-right-radius:10px;
+ background-color:#313639;
+ color:#fcfcfc;
+}
+
+/* Stream deck */
+.stream-deck{
+ transform:translatex(1323px) translatey(-2212.5px);
+ top:-3px;
+}
+
+/* Button */
+#myForm button:hover{
+ background-color:#595959 !important;
+ border-color:#ffffff;
+ box-shadow:0px 0px 1px 1px #7a7a7a;
+}
+
+@media (min-width:768px){
+
+ /* Form */
+ #myForm{
+  transform:translatex(667px) translatey(-440px) !important;
+  left:131px !important;
+  right:auto !important;
+ }
+ 
+}
+/* Button */
+#myForm button{
+ background-color:#444444 !important;
+}
+
+/* Stream deck  key */
+.stream-deck .stream-deck__key{
+ background-color:#444444;
+}
+
+
+.play-button {
+  background-color: #4CAF50;
+}
+
+.pause-button {
+  background-color: #f44336;
+}
+/* Pause button */
+#pause-button{
+ transform:translatex(-214px) translatey(-2565px);
+ position:relative;
+ top:6px;
+}
+
+/* Play button */
+#play-button{
+ transform:translatex(-220px) translatey(-2566px);
+ position:relative;
+ top:6px;
+}
+
+#player {
+  pointer-events: none;
+}
+/* Control button */
+#controlButton{
+ transform:translatex(-458px) translatey(-2561px);
+ position:relative;
+ top:2px;
+ left:-4px;
+}
+
+/* Message input */
+#messageInput{
+ transform:translatex(790px) translatey(-1274px);
+ width:446px;
+ min-height:18px;
+ height:18px;
+ min-width:29px;
+}
+
+/* Button */
+button:nth-child(10){
+ transform:translatex(796px) translatey(-1305px);
+ position:relative;
+ top:31px;
+}
+
+
+#chatArea {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow-y: scroll;
+}
+/* Button */
+button:nth-child(11){
+ transform:translatex(807px) translatey(-1279px);
+}
+
+.floating-textarea {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+}
+/* Chat area */
+#chatArea{
+ transform:translatex(0px) translatey(-580px);
+ margin-left:0px;
+ width:174px !important;
+ padding-bottom:5px;
+}
+
+#chatArea {
+  height: 400px; /* Adjust the height to your desired value */
+  overflow-y: auto;
+  line-height: 16px;
+  word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Styles for screens up to 600px */
+@media (max-width: 600px) {
+  /* CSS rules for small screens */
+}
+
+/* Styles for screens between 601px and 1200px */
+@media (min-width: 601px) and (max-width: 1200px) {
+  /* CSS rules for medium screens */
+}
+
+/* Styles for screens above 1200px */
+@media (min-width: 1201px) {
+  /* CSS rules for large screens */
+}
+/* Message input */
+#messageInput{
+ border-top-left-radius:20px;
+ border-top-right-radius:20px;
+ border-bottom-left-radius:20px;
+ border-bottom-right-radius:20px;
+ border-style:solid;
+ border-width:1px;
+ border-color:#5d5959;
+}
+
+/* Chat area */
+#chatArea{
+ top:329px;
+ bottom:auto !important;
+ transform:translatex(-247px) translatey(162px);
+}
+/* 
+/* Text */
+/* Chat area */
+#chatArea{
+ transform:translatex(-683px) translatey(-433.4000244140625px);
+ left:1248px;
+ right:auto !important;
+ top:637px;
+ bottom:auto !important;
+}
+
+/* Message input */
+#messageInput{
+ transform:translatex(47px) translatey(-1654px);
+}
+
+/* Image */
+img{
+ transform:translatex(613px) translatey(-225px);
+}
+
+/* Control button */
+#controlButton{
+ top:12px;
+}
+
+/* Play button */
+#play-button{
+ top:16px;
+}
+
+/* Pause button */
+#pause-button{
+ top:14px;
+}
+
+/* Button */
+button{
+ position:relative !important;
+ top:6px !important;
+}
+
+/* Button */
+button:nth-child(11){
+ transform:translatex(72px) translatey(-1671px);
+ top:16px !important;
+ bottom:auto !important;
+}
+
+/* Paragraph */
+#chatArea p{
+ font-size:14px;
+ white-space:break-spaces;
+ font-weight:400;
+}
+
+a/* Chat area */
+#chatArea{
+ left:1482px;
+ right:auto !important;
+ top:551px;
+ width:221px !important;
+}
+/* Chat area */
+#chatArea{
+ left:1492px;
+ width:236px !important;
+}
+
+/* Message input */
+#messageInput{
+ transform:translatex(35px) translatey(-1807px);
+}
+
+/* Button */
+button:nth-child(12){
+ transform:translatex(47px) translatey(-1812px);
+}
+
+/* Video input */
+#videoIdInput{
+ position:relative;
+ left:478px;
+ transform:translatex(-720px) translatey(-794px) !important;
+}
+
+/* Button */
+form:nth-child(9) button{
+ transform:translatex(-749px) translatey(-849px);
+ width:67%;
+}
+
+/* Control button */
+#controlButton{
+ transform:translatex(-176px) translatey(-2682px);
+ width:119px;
+}
+
+/* Play button */
+#play-button{
+ transform:translatex(-56px) translatey(-2640px);
+}
+
+/* Pause button */
+#pause-button{
+ transform:translatex(-55px) translatey(-2640px);
+ top:6px;
+ bottom:auto !important;
+ left:-4px;
+}
+
+@media (min-width:768px){
+
+ /* Buttons */
+ #buttons{
+  transform:translatex(-30px) translatey(-1771px);
+ }
+ 
+ /* Create buttons button */
+ #createButtonsButton{
+  transform:translatex(19px) translatey(-1904px);
+ }
+ 
+ /* Heading */
+ h1:nth-child(13){
+  transform:translatex(16px) translatey(-1796px) !important;
+ }
+ 
+ /* Num speakers */
+ #numSpeakers{
+  transform:translatex(40px) translatey(-1542px);
+ }
+ 
+}
+
+/* Text Area */
+form textarea{
+ height:700px !important;
+ top:-92px !important;
+ bottom:auto !important;
+ transform:translatex(123px) translatey(97px) !important;
+}
+
+/* Text Area */
+form:nth-child(9) textarea{
+ top:-91px !important;
+ bottom:auto !important;
+}
+
+/* Text */
+#text{
+ top:-31px !important;
+ bottom:auto !important;
+ transform:translatex(29px) translatey(45px) !important;
+}
+
+/* Form */
+#myForm{
+ top:-2110px !important;
+ bottom:auto !important;
+}
+
+/* Input */
+form:nth-child(9) input[type=text]{
+ transform:translatex(95px) translatey(16px) !important;
+ position:relative;
+ left:-52px;
+ top:-6px;
+}
+
+/* Input */
+form:nth-child(9) input:nth-child(3){
+ transform:translatex(103px) translatey(16px) !important;
+ position:relative;
+ left:-58px;
+ top:-9px;
+}
+
+/* Input */
+form:nth-child(9) input[type=file]{
+ position:relative;
+ top:-27px;
+ left:-89px;
+}
+
+/* Save */
+#saveBtn{
+ transform:translatex(-113px) translatey(0px) !important;
+ left:2px;
+ top:-9px;
+}
+
+/* Input */
+form input[type=text]{
+ border-style:dotted;
+ border-width:1px;
+}
+
+/* Video input */
+#videoIdInput{
+ transform:translatex(-450px) translatey(-2421px) !important;
+ left:484px;
+ top:-1px;
+}
+
+/* Label */
+form label{
+ left:-16px !important;
+ top:-863px !important;
+ width:74px !important;
+}
+
+/* Button */
+form button{
+ width:55% !important;
+ transform:translatex(-472px) translatey(-2462px) !important;
+ top:-10px !important;
+ bottom:auto !important;
+}
+
+/* Button */
+button:nth-child(13){
+ transform:translatex(67px) translatey(-1953px);
+}
+
+/* Message input */
+#messageInput{
+ transform:translatex(47px) translatey(-1945px);
+}
+
+/* Heading */
+h1{
+ padding-top:8px;
+}
+
+/* Control button */
+#controlButton{
+ transform:translatex(-176px) translatey(-2839px);
+ top:4px !important;
+ bottom:auto !important;
+ left:-5px;
+}
+
+/* Play button */
+#play-button{
+ transform:translatex(-56px) translatey(-2790px);
+}
+
+/* Pause button */
+#pause-button{
+ transform:translatex(-51px) translatey(-2790px);
+ left:-5px;
+ top:7px !important;
+ bottom:auto !important;
+}
+
+/* Stream deck */
+.stream-deck{
+ transform:translatex(869px) translatey(-2452.5px);
+}
+
+/* Create buttons button */
+#createButtonsButton{
+ top:1px !important;
+ bottom:auto !important;
+}
+
+@media (min-width:768px){
+
+ /* Form */
+ #myForm{
+  left:160px !important;
+  right:auto !important;
+  transform:translatex(881px) translatey(-815px) !important;
+ }
+ 
+ /* File name */
+ #fileName{
+  transform:translatex(3px) translatey(43px) !important;
+ }
+ 
+ /* File */
+ #myFile{
+  top:-45px;
+  left:-243px;
+ }
+ 
+ /* Label */
+ form label{
+  transform:translatex(-27px) translatey(-1508px) !important;
+  height:40px !important;
+ }
+ 
+ /* Num speakers */
+ #numSpeakers{
+  transform:translatex(40px) translatey(-1663px);
+  top:-367px;
+ }
+ 
+ /* Heading */
+ h1{
+  top:-5px !important;
+  transform:translatex(19px) translatey(-1919px) !important;
+  bottom:auto !important;
+ }
+ 
+ /* Create buttons button */
+ #createButtonsButton{
+  transform:translatex(19px) translatey(-2028px);
+ }
+ 
+ /* Buttons */
+ #buttons{
+  transform:translatex(-26px) translatey(-2044px);
+ }
+ 
+}
+/* Text Area */
+form textarea{
+ height:695px !important;
+ top:-92px !important;
+ bottom:auto !important;
+}
+
+/* Text Area */
+form:nth-child(9) textarea{
+ top:-91px !important;
+ bottom:auto !important;
+}
+
+/* Text */
+#text{
+ top:-31px !important;
+ bottom:auto !important;
+ transform:translatex(29px) translatey(45px) !important;
+}
+
+/* Form */
+#myForm{
+ top:-2099px !important;
+ bottom:auto !important;
+}
+
+/* Input */
+form:nth-child(9) input[type=text]{
+ transform:translatex(95px) translatey(16px) !important;
+ position:relative;
+ left:-52px;
+ top:-6px;
+}
+
+/* Input */
+form:nth-child(9) input:nth-child(3){
+ transform:translatex(103px) translatey(16px) !important;
+ position:relative;
+ left:-58px;
+ top:-9px;
+}
+
+/* Input */
+form:nth-child(9) input[type=file]{
+ position:relative;
+ top:-27px;
+ left:-89px;
+}
+
+/* Save */
+#saveBtn{
+ transform:translatex(-113px) translatey(0px) !important;
+ left:2px;
+ top:-9px;
+}
+
+/* Input */
+form input[type=text]{
+ border-style:dotted;
+ border-width:1px;
+}
+
+/* Video input */
+#videoIdInput{
+ top:-789px;
+ transform:translatex(-399px) translatey(-1612px) !important;
+ left:435px;
+}
+
+/* Stream deck */
+.stream-deck{
+ transform:translatex(867px) translatey(-2445.5px);
+}
+
+/* Label */
+form:nth-child(10) label{
+ width:82px;
+ left:-5px;
+ top:-853px !important;
+ bottom:auto !important;
+}
+
+/* Message input */
+#messageInput{
+ transform:translatex(44px) translatey(-1957px);
+ position:relative;
+ top:11px;
+}
+
+/* Button */
+button:nth-child(13){
+ transform:translatex(63px) translatey(-1966px);
+ top:20px !important;
+ bottom:auto !important;
+}
+
+/* Label */
+form label{
+ top:-858px !important;
+}
+
+/* Control button */
+#controlButton{
+ transform:translatex(-175px) translatey(-2813px);
+}
+
+/* Play button */
+#play-button{
+ transform:translatex(-56px) translatey(-2769px);
+}
+
+/* Pause button */
+#pause-button{
+ transform:translatex(-51px) translatey(-2771px);
+ top:9px !important;
+ bottom:auto !important;
+}
+
+/* Button */
+form button{
+ transform:translatex(-475px) translatey(-2450px) !important;
+ width:56% !important;
+}
+
+/* Tag btn2 */
+.tag-btn2{
+ transform:translatex(1056px) translatey(-3266px) !important;
+}
+
+@media (min-width:768px){
+
+ /* Form */
+ #myForm{
+  left:160px !important;
+  right:auto !important;
+  transform:translatex(881px) translatey(-815px) !important;
+ }
+ 
+ /* File name */
+ #fileName{
+  transform:translatex(3px) translatey(43px) !important;
+ }
+ 
+ /* File */
+ #myFile{
+  top:-45px;
+  left:-243px;
+ }
+ 
+ /* Label */
+ form:nth-child(10) label{
+  transform:translatex(-35px) translatey(-1492px);
+ }
+ 
+ /* Heading */
+ h1{
+  transform:translatex(16px) translatey(-1933px) !important;
+ }
+ 
+ /* Num speakers */
+ #numSpeakers{
+  transform:translatex(37px) translatey(-1678px);
+ }
+ 
+ /* Create buttons button */
+ #createButtonsButton{
+  transform:translatex(16px) translatey(-2041px);
+ }
+ 
+ /* Buttons */
+ #buttons{
+  transform:translatex(-32px) translatey(-2036px);
+ }
+ 
+}
 
 
 
 
 
-(Adrian) what is this footage 
-(Rayan Weber) a good idea 
-@Das exactly being shot I worked that out myself uh let's get the rocket up on the screen this is another launch that's coming up in the next couple of
-(02:08) days uh five baby bluebirds in the nest on my back porch and I have cameras set up on them but there is the Falcon heavy Ryan take it away with Falcon heavy 
-@Rayan Weber thanks to us yeah I'll look next time so yeah okay joining me we have Adria by we also have in the field uh we have Max how you doing Max
- @Julia Bergeron well actually you you don't have Max uh Max is your camera operator today and I am Julia Bergeron I am here in the field at the KSC press site on this beautiful but kind of windy Sunday happy Groundhog Day
-@Rayan Weber well hello Julia
-(02:48) sorry not three times scrubbed do I scrubbed because of whether we had a bit of lightning Julia how is the weather looking from your position at the moment
-@Julia Bergeron well what I can tell you is I I'm I don't see a single cloud in the sky I see a gorgeous moon I see a falcon heavy on the pad there isn't even Haze what I do feel though is wind that is a bit better than what would have been at the beginning of the window I say a bit better I don't know what the upper level winds are but I can tell you it's a lot better than watching
-(03:25) lightning hit 39a
-@R uh so here's what the weather currently looks like 26 ish degrees Celsius uh winds just over 50 miles an hour so it's a I'd say what is that a bit of a breeze uh but uh nothing too substantial and the sun's out which is wonderful you can see the the um as we approach uh Sunset you can see the more orange use uh touching lc39a the uh the Water Target up quite nicely I'm going to hit this first from musical walls thank you very much regular name in chat uh with the winds be too much if
-(04:03) it weren't for all three boosters are being expended um Adrian what do we think about uh wins and um the recovery and weather and stuff like that well I'm not sure if that would really be a concern because usually that would also violate probably launch criteria um as of now SpaceX is saying that the weather is 95 favorable for liftoff now targeting for 826 uh local time so it seems like with their slight shift to the end of the window which they did here um they improved their situation and their chances of oil lift off today
-(04:39) quite a bit and yeah as of now I wouldn't like with a 95 liftoff chance I I don't worry about the weather right now um I might regret saying this uh down the stream though we'll see we'll hold you to account Adrian you can see there as well Port Canaveral from Fleet cam looking uh very nice this uh this evening in Florida some birds flying around as well and uh three of nine is become a Capcom member thanks very much for that if you want to you can join the Discord if that's something you're interested in
-(05:13) excuse me uh James here has a good question asking why has uh booster 1053 only flown twice and not flown uh for four years 1052 has a more typical seven uses and last few last flew eight months ago uh so Adrian why is 1053 uh not as experienced in Flight as it's a sibling Court 1052. ah yes that's because they probably never bothered converting it um so far if I recall correctly 53 was only used as a falcon heavy side core um on the Arab z6a Mission and the stp2 mission they can convert boosters to uh
-(05:56) from FalconPart : 2 heavy to Falcon 9 but it seems like they yeah with 53 they never bothered to uh to use it as a falcon 9 and to really bring uh bring it um to up to speed and also Alex in the back Channel saying it comes also down to interstage design here with the old interstage design um but yeah it's it's it never happened here and we're Falcon heavy being a bit under more slippery side on the on the Manifest um there was not that many Falcon Heavies flown compared to what we expected initially that also mean that
-(06:31) uh the side boosters that were planned for these missions did not get that much of flying hours apparent to what we would have expected and yeah now we arrive at the third flight for p1053 which sadly will also be at last yeah a triple core expended Falcon heavy uh I still think it might be a bit unfair to call it fully expended because the fairings are being recovered um but In fairness the fairings don't exactly have to perform a propulsively handling do they but that would be cool imagine a fairing performing a propulsive landing I would
-(07:06) watch that uh but yeah they don't have to but still good that they at least one try to recover the fairings which still is quite some chunk of cost um if I remember corrected we are still talking about like single digit Millions for the production of a fairing if I recall earlier numbers correct so yeah still good that they're recurring these but again the ysr3 mission needs the performance it can get and goes to a geostationary orbit so they are not recovering anything in terms of boosters for this flight which uh yeah it's it's
-(07:41) always sad to see because it's a reusable rocket you want to see it being reused but um yeah if the mission demands it the mission demands it I have a fun fact about this fairing recovery though oh so SpaceX recovery ship Doug is almost 1 700 kilometers downrange um get this that is the farthest that a fairing recovery has ever happened and that's by over 400 kilometers so when we're talking about a rocket being needed this one's being heated very far I wonder I wonder if that will maybe even influence uh the chances of this
-(08:26) being a successful farming recovery because in after all the farther you eat it the more energy it also has that has to dispose during re-entry and yes these fairings are kind of good with handling re-entry um heat and re-entry energy but after all maybe that's I mean that's still pushing the envelope here it's it's still expanding what they what they did before so we'll see if if they even will successfully recover the pharynx or if this might need some tweaking so we'll see actually speaking of tweaking
-(08:59) um it's actually 1960 kilometers uh Gavin had updated that once they reached their final destination so and in terms of wow in terms of longitude if that's yeah longitude that's the side to side one it's further off the coast than Bermuda is which is just like insane to think about that that's a it's a long sale for for the um for the fairing recovery ship and yeah I think that also just goes to show how much power you can get out of expending a falcon heavy it's it's certainly not a weak rocket at all it's
-(09:35) uh well formally until last November it was the world's most powerful operational rocket which was then of course taken by SOS and has now also if you count it as operational been doubly taken by Starship following the uh the launcher week Thursday a week ago on Thursday I should probably add uh Julia I'll throw this one to you Joe asking will we get a falcon nebula tonight or is it too early before Twilight Max is aggressively nodding has said yes and I know last time I said 50 50 we had a lot of clouds with the way the
-(10:11) beautiful sun is just setting right now by time we get up to nebula height uh there should be enough sunlight in that upper atmosphere to make that expand and maybe do some jelly fishing very exciting indeed uh Cooper here has an interesting question uh do you ever think </div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 3</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">that I'd attempt to land a Center Court again so Adrian is Center core recovery uh kind of being being given up at this point because of course the the maiden flight uh they lost the center core and uh also if I remember correctly a center course
-(10:47) being lost at sea before yeah it's so just to say like it's it's not like the given up it's just the missions they are flying right now are not really giving them the opportunity that also comes down to the fact that Falcon 9 really improved so much over the years and took a lot of these missions that would be fully recoverable from Falcon heavy to Falcon 9 so that's one of the reasons why we see these missions now um so I can have really got these high energetic orbit missions more and more
-(11:17) like missions that demand usually from the first stage to throw them quite a bit so the second stage has to do less and that often results in the center core not being reusable at all so that's where we are right now it's not clear if this will be forever and if there might be a mission that maybe is a heavy payload to Leo where it's more about getting the weight up that could maybe allow for centers uh core recovery it's not out of the picture for the future it's more that right now the the
-(11:50) missions are not aligning for a fully recoverable Mission because there's like a very small area of payloads where this could really be utilized so we'll see but uh yeah right now it looks like we get a lot of side booster recoveries but not a lot of Center Court recoveries uh Noah here has a good point uh or a question asking what are the numbers of each of the three uh boosters Adrian what numbers what are the serial numbers of the boosters we were just talking about uh yes we have three boosters on this uh
-(12:24) rocket of course it's tropical booster it's uh we have B10 52 which is one of these side boosters that flew two four six seven missions before and with the other one as we talked before is b1053 that's the other side booster and then in the center we have the never been used B10 68 which will debut on this flight and then also be thrown away and that is logical in the sense we talked about because there um there's no way to convert a falcon heavy Center core to a falcon 9. the side boosters can be but
-(12:58) the center course cannot and since there was never a reused Falcon heavy Center chord this has to be new it's the only way they can get around it really um and you can kind of tell which booster is which because of how they are um uh 52 is the one that's closest to the tower so seven flights most City uh only a couple of flights a little yesterday but still got some soot on it and then obviously the center core uh Sparkling White in the sun because it's never been used before it's never had to
-(13:26) go through um it's never had to enter the Earth's atmosphere with the uh uh with a three millions under just pushing all of that kerosene soot up and then sticking to the side of the vehicle uh looking in here now uh Brian asking since Falcon heavy is being maximized for performance what other Rockets uh would have been able to launch this Mission well it's it's a pretty beefy payload we've got uh over six and a half tons of payload Julia what other vehicles from the cape do you think that would have been able to carry
-(14:02) something like uh like a via sat 3 and the other two payloads I would say probably Delta IV heavy another three core vehicle um can't think of anything else that would be it from Cape I mean you could technically say SLS but um that would be a bit of an of an Overkill to use SLS for vsat sorry we don't want to send it to the moon that's gonna say let me say that with some practicality I'd say a Delta four heavy yes uh so Adrian uh speaking of uh Mission mass and uh other other vehicles and uh things along those lines do you
-(14:49) want to give us just a little overview in what we can expect today what what is this Mission actually about yet as it's</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 4</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy"> launching the viasat3 uh satellite it's a communication like a geostation etc which is actually one of the most interesting aspects about this and why it's needing so much energy because it will be inserted directly to geostationary orbit it's not going to transfer orbit it's going directly to geostationary powered by Falcon heavy um there's also two smaller payloads the
-(15:20) Arcturus and the Jeep space one right chair satellites which will fly on this Mission um it's uh it's a right now targeting um you know 35 minutes from now and as we said before none of these three boosters for this Mission will be reused that's the overall option overview so far this launch campaign has a bit of a I wouldn't call it bad time but it was a bit of a bumpy road because initially the static fire um was not returning the data they hoped for which means that had this slip for a few more days and after that we also had
-(15:57) seen some scraps from launching this due to weather related reasons so so far this launch campaign is a bit on a bumpy road but we hope to see this stop today and everything's still continuing as normal because I've heard that the uh the rp1 the uh the uh rocket propellant one the uh well you refined kerosene for the second stage the upper stage has nine begun loading so we're still on target for a launch in just under 35 minutes time we should also find maybe point out here uh since we also saved a lot of times
-(16:33) for Falcon 9 but this right now has no wiggle room anymore uh Falcon heavy let's just like Falcon 9 once they go into the countdown once they go into the the yeah operating this rocket they cannot Wiggle anymore they cannot abort or hold um and that's that's really a situation where we are right now here they they targeting a specific second here they cannot modify it anymore they don't have enough window left to do a full recycle so everything on this countdown that would mean a halt is instantly a scrub
-(17:09) for today that's just this reality with using these uh super dense propellants and like getting to very specific pressures and a very specific countdown um they're locked in they're locked in to this specific moment right now I uh seem to recall uh that via sat 3 is one of the uh I don't know if we really have a term for it but one of the payloads that many different Falcon heavy missions have been getting pushed over the last year or so because of delays with the payloads not necessarily problems with the
-(17:41) seem to recall via sat 3 is one of those um because funny story Alex was telling me because of the launch Mount conversion when I was originally intended to go see psyche last year that if I stuck a ride I got a bit longer I might have been able to see viceat 3 go at the same time because it takes a while to get 39a preps between Falcon heavy and Falcon 9 but both of them obviously did not launch last year um one of them fingers crossed will be launching in just over half an hour's time and the other one hopefully in
-(18:09) October and speaking of conversion more about the boosters Whitney is asking what does it take to convert a standard Falcon 9 into a booster and Adrian I guess also what does it take to convert a side core into into a normal falcon 9. the um well the first thing is to take off the nose cone and install an interstage because uh these these right now are equipped with nose cones there are two nose cones on these uh side boosters so one of the main steps is to take out the nose count put an interstation on it but also you would
-(18:46) remove the the attachments to the center core where they where they attach and grab to this to design the core um because that's that's how you really would fully um change them but also I think there's a another Point close to the engine section which will also be modified um to to fully convert them again like that they can do this with these side boosters because technically the side boosters are kind of like they're Falcon lines th</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 5</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">ey're Falcon lines in a specific configuration um the center core has a more specific
-(19:18) design it's it's more structurally enforced it has very specific load points it's it's a very different rocket because it has to hold these two side boosters into place and basically give it a structural stability so there's a bit of a difference the set the core is different the side boosters are basically Falcon lines uh we've got a couple of super Chats on the like here uh Jacob's saying that they're on a wonder of the Seas I think that's the cruise ship I guess the cape
-(19:46) a few hours ago a ton of us really eager for the go on Chuck if they can say well hopefully you do not cause a range violation that would not be optimal for today's flight Telstar um is uh asking why doesn't SpaceX clean the boosters after a flight doesn't the build up affect the weight and aerodynamics Julia I know you're a fan of watching the boosters come back into Port uh why did they not give them a little bit of a scrub well uh Elon has said that that honestly that the impact from the soot really is
-(20:15) is quite minimal uh what we have found that over time though as these boosters do get into the double digits there is just a slight change to the flight profile so eventually this will will make a difference but really not enough to be noticeable and the reason we don't clean the sod off is with that minimal impact honestly that would take far too much time and it would generate uh hazardous waste uh the only way to really clean that is with I believe it's isopropyl alcohol and that's considered a
-(20:54) hazardous waste which would in turn actually drive up costs to be able to dispose of that and I don't know about you but I am not standing there wiping down a falcon one isopropyl wipe at a time uh we also have a quiet storm with uh 50 thanks very much for that that's a a big contribution appreciated very much uh all goes a long way in helping to keep keep things going keep photons flowing um and bring you uh this coverage of uh launches such as Falcon heavy and um musical wolves asking will the side booster nose cone to be recovered Adrian
-(21:33) uh so faring's being recovered on the second stage what about the nose cones on the on the boosters they are not there's no mechanism to throw them out and let them just glide through the atmosphere So based on the profile we see right now and the fact how they how they managed the booster will they will hit the water quite hard or to to to tell it like that so uh there probably won't be anything to recover because they will not perform uh any like major slowdowns um for this so yeah you basically they
-(22:12) might even already start to tear up in the atmosphere and start to break up there and even if they survive that next up would be the ocean where they slam into very um yeah very without any breaking so yeah don't expect anything for from these side boosters to survive that there's a reason why they're not recovered they are kind of already very far down range um so they have a lot of energy that will be disposed there got another jellyfish question in here from Andrew I know some people have joined us in the last few moments before
-(22:46) we went on air Julia I thought this once a year again will this be the first double jellyfish [Music] well now you're making me think really hard uh I'm not sure if it'll be the first I'm feeling like I have seen this before because we have oh yeah no I oh Alex I don't remember what launch it was there was a lot of ooh and eyeing at the Press site because the the thrusters from the fairings were going the first stage kept going the second stage like there was a boost back and the second stage was
-(23:25) going on and all of this was happening at once so it can't possibly be the first because there was an awful lot of ooh and eyeing yeah he remembers that too so yeah yeah it's happened before but we won't have a boost back burn today because when we're not we're </div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 6</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">not we're not coming back so there'll be no boost back um none of the uh the only things coming back are the fairings and uh they themselves will just uh Glide not really they'll just fall back into the Atlantic under under their um parafoils so no uh
-(23:59) we'll still have those little thrusters they will but yeah they're a lot smaller than a falcon 9 or the Falcon heavy side call though but the sun will still be able to light them up hopefully hopefully I don't know they always seem more impressive for their size than you think they'll be uh-huh especially with the with the with it with the jellyfish effect just makes everything look much more spectacular from our perspective here on the ground um coming up shortly we should see that uh T minus 22 minute vent
-(24:33) um which will also verify that the the propellant mode is still um going as it should uh there you go in there that's the timeline for today's uh flight currently uh in the in the stage of rp1 load on the second stage um which began uh about 10 minutes ago and uh so just under eight minutes until the liquid oxygen load begins on stage two and um then we get into pretty much the final minutes or so into the count uh from there and uh uh that's that's the timeline for today's Mission all the way
-(25:14) down until t zero and also we can now very much see venting from the rocket very clearly uh Esther the boosters are getting filled like the Rock is getting filled we see it becoming alive which is always a great thing to see I think once you really see that there's uh there's there's movement there's there's uh things happening that really means we have a rocket launch uh upcoming yeah oh that is I wonder if the wind direction has changed a little bit because you can yeah I guess I guess the
-(25:51) the the venting has changed which I don't think it has because you can kind of see the venting appearing and then disappearing behind the behind the uh strong back there um I guess when there's a gust of wind that kind of blows the the um the boil off and it becomes a lot more visible against the uh against the uh the sky Julia has the sunset already at the the orangeness has kind of dipped down a bit it's kind of um seems as if it's post sunset uh uh well yeah the sun is below the Horizon uh behind us we have the Golden
-(26:20) Glow uh so you're starting to see more dusk colors at the pad but there's definitely still a white gold glow behind us uh Ron asking here uh why do we bother to paint the booster uh due to the due to the white of the paint Adrian there's a very famous vehicle that launched from the cape uh or two actually maybe even three if you count Delta IV heavy that aren't painted because of the insulation why is Falcon 9 painted I actually don't know the full answer level that I always assumed it has some
-(26:57) sort of protective measures as well and also SpaceX maybe decided it looks a bit cool but they don't really bother with the painting that much of the first flight like they they look very white uh once they came out and once they're done with like once they're done with the first flight they're getting they're getting dirty it's it's really not that they bothered that much after initial flight so I I don't think it's something to that SpaceX really has high on their agenda as they are kinda known
-(27:32) for just Prof yeah preferring to go with function over form I think let's be real Starship has for example also it's it's part of like they're attractive Parts about Starship but it's not like they they really aim it for for it being fancy and well polished so um yeah it's uh it's not their their main focus they they really want performance it also looks wonderful at the same time and the moving of the SpaceX logo on the on the on the boosters uh from the bottom to kind of the middle uh where
-(28:10) the uh soot build up is less because of uh I think it's because of the of the ice that film forms around the outside also makes the boosters look a</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 7</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy"> lot nicer um I I still hold the opinion that the booster looks prettier than a than a clean booster um I like yeah I don't know why because it's kind of counter-intuitive the the dirty booster like if your car's really Mucky it should be more beautiful but a dirty bit there it is everybody's favorite Falcon event is it is it are we are we I like the
-(28:45) close to liftoff event as well uh it's the it's the really we're getting close to action event I think this is my second favorite Falcon heavy event you know you've you know you've made it to the right channel when we're discussing what our favorite events are I have very strong opinions about vents let let this Channel and a lot of discussions on this channel be my witness I have strong opinions about different kind of vents all right now that it's vented I I can give you my opinion on the whole painting thing uh
-(29:20) yes they move the the SpaceX logo uh basically um because that's where it looks the best and and takes less damage from that uh re-entry or Landing burn and frankly yes I like boosters with character and each and every booster is unique when we see it coming back into Port so I like dirty boosters something I wish that the Falcon 9 boost has had though because I don't know if they'll do it with future Starships I hope they do but they like they put s24 on the ship it you could you could see it the the serial numbers on the Falcon
-(29:57) 9 and Falcon heavy boosters are really small and quite difficult to see unless you don't know where to look something I would like as if they could just put the numbers a bit bigger on the sides and you can be like oh that's number 52. that's number 53. that's it if I was in charge of liverying the the Falcon boosters that that would be my first course of action to make the numbers bigger um but also not to make the delivery ugly those numbers aren't for our benefit though I hate to tell you those numbers
-(30:23) are they sure you know they should be I think I want to see the numbers you want it more like NASCAR gotcha gotcha yeah yeah yeah I want a big on the side and then a fancy font as well with like glowy thing can we put sponsors on okay that's a bit far now uh just heard that the the rp1 guide for the second stage swiftly moving on has now completed um so uh next up is the liquid oxygen which starts loading at T minus 18 minutes and 30 seconds as you could see on the timeline Sam asking how much mass does Falcon
-(30:58) heavy save from not putting recovery equipment on so Adrian that would be grid fins and the landing legs is there anything else that they need to recover a booster no it's it's good things and the legs but and also probably Technic so there's also t-tap which is less stored then because they don't need that much for ignitions because there's less ignitions um so that's also part of it um I I would enter very much a lot of guesswork here um just giving you some numbers I could put out some numbers here but I don't
-(31:35) feel qualified to do that and so I don't want one to I want to point out that the most likely reason for them removing recovery Hardware is actually not I I don't think the main goal is weight saving uh because especially these titanium grid fins tend to be very light which is and uh and uh yeah one one purpose of titanium um and I think overall they it's more expensive especially these grid fields are very expensive parts so they take them off to to not dump them into the ocean that's the that's the goal here to
-(32:14) um to to get them basically uh for for Missions where they need them and do not waste the very precious titanium am I correct in saying that like the single like the biggest single forged piece of titanium or is that record been taken by someone else I remember hearing that at some point I don't know if it's correct or not oh sorry could you repeat that is it true that these were or are the largest single like uh what's the word like milled or like cut pieces of yea</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 8</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">h I I heard that story as well but I I
-(32:49) think it was never like verified or like there's a like world record for it so I I'm not sure if that is true I heard that the saying as well um I think SpaceX itself cleaned it so there's always the question like did they do their homework and completely verify it's definitely true um because um I I think yeah again like I I wouldn't uh put my hand into a fire here to 100 guarantee there's no bigger part in the world you can see that the locks guide has begun on the on the on the second stage
-(33:27) so still progressing towards a launch just over in just over 17 minutes time from lc39a in Florida a question here from Lucas about the cost of a fully Expendable Falcon heavy uh Adrian do we have any numbers from SpaceX or do we or with the only way of being able to find that out be ask or try and put a pay guide on Falcon heavy uh there are there are numbers flying around it's uh always has been a bit of changing and there's a bit of um going up I think the last price for expendable that was put out was like in
-(34:05) the ballpark of 150 million for fully Expendable uh of course that's the that's not the cost that's the price and that's that's always the the situation do you do you want to look at how much SpaceX needs in money to build it or do you want to know how much customer pay for it and um that's that's the always the discussion here to have but I think it wasn't a ballpark of 150 million in the cost for expendable but I think these numbers are a bit older and SpaceX tends to not fully disclose these
-(34:37) numbers uh all the time um but uh yeah reusable is a ball pack of about 100 million and Expendable one about 150. there's a really good question here from Diamond user and whilst Adrian's been answering that question I've just looked up the numbers so to my calculations the uh uh sorry I got the wrong question here oops uh we'll answer this one though uh asking uh why does Falcon heavy look half burnt uh Juliet why does Falcon heavy look half burnt and I'll get to the question I was talking about
-(35:10) in a bit not burnt it's just patchwork um well it looks like that because uh booster 1052 this will be its eighth flight booster 1053 this will be its third flight and then you have in the middle a very brand new center core so it's not burnt it's just it's okay they still fly I think there was a topic that uh Dr zubu at some point on Twitter made up like you you can always start to argue is it would you even say that the center core or side booster that has flown is less uh safe or less likely because there's a
-(36:02) there is a point at some point with more and more flights on these boosters where you could say like isn't isn't like a second or third flight safer than the first flight because it's already proven Hardware it's already something that went through a complete cycle and worked so so I think there's an argument to be made that if you have a very high expensive Mission you could always almost switch to a situation where you want to be on the second or third flight of hardware and not on the first
-(36:30) um I think that's uh I I let your discussion to have the question I was talking about was uh from a Chango monco asking how many boosters are currently in circulation I did do the numbers and age uh not agent Alex is also uh given me some more data in the back channel so I'll run through this really quickly I think there are currently 20 boosters in circulation two of them have reached 15 flights so SpaceX need to do like a deep refurbishment of them and then there's an additional three that are currently
-(37:01) being tested so that's things like if static Fires at McGregor et cetera Etc which you can watch on McGregor live so the the actual numbers if you want to know them 52 53 58 60 62 64 65 67 68 69 73 76 77 and 78 are currently in use in Florida 61 63 71 and 75 are all in Vandenberg 72 74 and 80 are yet to fly but they will be flying from Florida and</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 9</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy"> uh 79 is currently on its way to McGregor I'm being told it's a falcon heavy Center core so there you go if you lost me rewrite the stream figure out what all the different Falcon 9 and
-(37:39) Falcon heavy boosters are currently up to and of course when b1079 makes its way to McGregor you can watch it go through its testing process on McGregor live oh 24 7 live stream of all things McGregor uh uh Mr vipitous sci-fi got that wrong asking how far away are the Falcon heavy upgrades bigger fairing vertical integration Dragon XL uh Julia I certainly think from like a photography uh perspective um having a vertical integration like facility I don't know are you expecting something similar to the rotating
-(38:18) service structure used on shuttle will that will that get in the way of your pretty photos uh yeah that that probably would get in the way of pretty photos uh I guess now I've become so accustomed to their not being a rotating service structure here but you know what any photo of a rocket is pretty and once it clears the pad that wouldn't be an issue anyway so there you go I I do like ground systems and they have a story to tell as well I also guess that with a bigger fairing it would give you more rocket to take
-(38:54) photos of in terms of surface area so uh they'll probably make up for a vertical integration um Adrian Adrian have we heard anything on Dragon XL uh I I don't think we have for a little while at least no it doesn't seem like it's a high topic right now SpaceX of course has loads of projects especially together with NASA and right now it doesn't seem like Dragon Excel is like the front runner project they're working on right now so I expect once really we get into a situation where the Gateway
-(39:25) um gets really going and they're they're talking about the future of that I think that's the situation where they really want to also talk about that in a and a more detailed way uh gonna hit a few more um super chats and the like here as you can see the the the purples the pinks and the and the deep blues really starting to show in the sky uh Dr R Martin uh saying I'm 70 years old and I was present for the launch of echo1 in 1960 quite a difference um yes Falcon heavy is a is a bit a bit of a different Beast
-(40:04) um uh but certainly all launches of fun launches uh we also have a five uh gifted red team memberships here thanks very much for that uh if you if you if you receive one of them make sure to uh thank me phone man in chat uh Infinity uh sir you know either 10 pounds uh good evening from this uh Southwest UK I mean technically over here it's already like one o'clock in the morning so uh good morning and um another one here uh two pairs thanks for awesome coverage you're very welcome and also gifting five red
-(40:36) team memberships thank you very much of course if you received one of them make sure to thank them in chat uh ARP asking how much extra mass does the suit from previous launches and we answered that a couple minutes ago so um fingers crossed you around to see that um there uh uh short answer is it's negligible we don't really have to worry about it uh for the number of flights which the boosters do John's saying send it hopefully they do I want them to send it um something uh you can also do if you're looking forward to Falcon heavy
-(41:06) sending it is get a bit of merch with Falcon heavy on it our heavy collection of different items uh allows you to express your enthusiasm for the former world's most powerful operational rocket as of last October November actually uh if you're if this uh being released in celebration of the return to flight of Falcon heavy um which was ussf 44 a very focused over launch unfortunately but there you go big heavy rocket heavy the e spell tank with the uh with the with the three calls and the and the fairing is the the
-(41:42) bit of the a that's probably a technical term for that which I which I don't know sorry I'm not saying any people who are Professi</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 10</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">onals in typography um but there you go the bit of the E and the bit of the a is what Falcon heavy makes up you can also get it on a mug or if you want a pretty picture of Falcon heavy we've also got them available in metal print form or available shop.nasaspacefight.
-(42:05) com uh this one here you can see a big plume you've also got some other wonderful photos all available shop.nasospace.com to hopefully suit all of your Falcon heavy needs of course we have other items on the shop but as this is a falcon heavy launch that's kind of the bit of the shop which specializes in this vehicle which is currently on track to launch in just over eight minutes time um John asking here why don't they use a many many used a booster that's been used many many times as a center core by taking the legs of Julia why can't we
-(42:45) use a normal Falcon 9 booster as a falcon heavy Center core the reason we cannot do that is just because the Falcon heavy Center core is basically a unique rocket design as Alex was saying earlier in the broadcast um it is structurally different to support the two side boosters so unfortunately there is no way to give a Valhalla goodbye to any of the older boosters by converting it but we can convert them into those side boosters and and give them in this case a nice watery salute goodbye speaking of the center core the rp1 load
-(43:29) in that booster itself is now completed um a fact we've just got from spacex's this is the 100th flight of used faringhoff so really striving to reuse Falcon the Falcon family as much as possible the boosters are I'm not going to say easy to return because propulsively adding booster traveling back quickly and hitting a Target very difficult to do a big accomplishment for reusability but they can get them back fairing halves they can get them back the second stage uh it would not in terms of Master orbit it would not be
-(44:00) worth it so really uh SpaceX is striving for reusability reusing Falcon as much as it can heading towards Starship which will be fully reusable you know what go on to you again I just thought of a way that I can make Gavin cry without us sacrificing the lovely Nets of of ships like Mr Stephen we probably wouldn't have achieved this 100th flight of uh of a fairing half uh just because although that was a very cool way to try and catch fairing halves they did learn that it was just as effective to pluck them out of the water and wash them off
-(44:39) so salute to the fleet for making these recoveries more reliable and we've also just got words that the uh the side boosters have got their rp1 fully loaded b1053 the first to do so and then beat b1052 uh it's sibling booster just a short while uh after um I think we also chill engine chill very awesome yeah we are in engine chill the the 27 engines Reloaders are getting now preconditioned for cryogenic fluids to flow through them head off liftoff so yeah yeah we are in the very final stages of the count and actually the
-(45:25) next major Milestone will be at one minute where the flight computer commands to begin final pre-launch checks and The Rocker takes over the countdown basically from there on out it's all Falcon heavy controlling the countdown so kind of exciting we are we are in the final steps just want to quickly thank this uh Super Chat here no message but your contribution is uh very uh very well appreciated um everything we get even if you're just watching sharing it it's all greatly appreciated it goes the wrong way and
-(45:55) we're so grateful for you deciding to uh tune in and watch us uh talk about rockets for an hour and then fingers crossed C1 launch uh Aaron asking here with SpaceX acquiring slick six at Vandenberg do we think we'll see a falcon heavy from California Adrian have we got any whispers about the Falcon heavy from California I mean initially it was already planned if I recall correctly um but yes I think uh that's basically the plan online to have both options then it also reall</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 11</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">y shows to you like there might be some some juicy into into
-(46:33) the future of of a Falcons here uh down the line it's it's not all over yet with uh when when people are saying like oh how long will they fly the Falcons before Starship takes over well it might take a while there there's still some some life and some juice left in these in the Falcon Fleet and I think they will fly for many years to come probably like 10 years or so I I wouldn't be surprised to to see like Falcon lines and Falcon heavy still fly and uh 2030s I suspect in my personal opinion that
-(47:06) some government contracts like from the Department of Defense National reconnaissance office etc for launching their secret payloads uh I think Falcon heavy and Falcon 9 will stick around for those at least because contracts that take a while to go through etc etc may not want to risk it on a new vehicle like Starship and as Adrian was answering that uh question actually the strongback had started to uh peel back there there it goes now um starting to fall back slightly it's not the complete fall back we'll see at
-(47:34) Rift off but it's just a couple degrees back to give the vehicle a little bit more breathing room um As It Gets Ready for launch in just over three minutes time both the side cores have had their liquid oxygen fully loaded at this point now so still on track for that launch very exciting fingers crossed we'll still go by the time the clock hits zero the center core is also now just finished loading its liquid oxygen whilst we've got this angle from SpaceX looking at the top the fairing halves are a little
-(48:07) bit different color Julia quickly do we know why the tips on the on the pharynx are a different color or is that not really something we know um well I you're talking about the very tippy top of them that's a different color because I do believe that's a piece of reinforced metal uh that I think helps when it's uh re-entering and landing in the ocean just to kind of give it a little bit more uh reinforcement sounds good and uh fun fact everybody this is the first Falcon heavy flying with used firing half so there you go uh
-(48:48) reinforce tippity top of the fairing halves and they're being reused for Via sat 3 and the other two rideshares go on Adrian one quick thing I want to point out why the second stage is gray because you can see the second stage also being gray that is a special thermal protection layer to and oh there's the two-man event there we go that's the final my favorite Falcon have event there we go um yeah the the gray on the on the second stage is to protect the and basically keep the terminals correct in
-(49:19) the for a long hosting phase since this is directly going to Geo there will be a burn very much late in the timeline here uh to be precise the last burn of this uh will be SCS will be after 4 hours and 22 minutes once it all the way goes up to GTO area and then fully inserts it to Geo so it needs to protect these these uh repels for a long time and keep them conditions and that's why the gray interstate is there anyway uh coming up now on uh T-minus 59 seconds there we go uh the flight computer should now be commanded to
-(49:59) perform the final pre-flight checkouts in about 10 seconds time we'll get the flight director uh verifying if we go or not fingers crossed we are we should be hearing that in a couple seconds time as we approach t0 the propellants will be pressurized the uh engine controller will then ignite the engines using t-tep and the uh launch director we are go for launch here we go getting ready 30 seconds time and then of course at T minus zero lift off fingers crossed should be occurring with all 27 Merlin's
-(50:30) underneath each of the three cores approaching T minus 20 seconds now this is when the pressurization starts to kick in for the tanks as we count down now uh into the final 10 seconds of the game here we go 10. five seconds there we go we've got ignition and lift off we have</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 12</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy"> liftoff of the first fully expanded Falcon heavy carrying via sat 3 to geostationary orbit we're clear the tower let's listen in for the rumble of those 27 Merlins foreign [Music] [Music]
-(51:58) arms in the background going off we're past 60 seconds into flight now the rumble of those 27 mergans continuing as a this fully Expendable vehicle is heading up into space past Max Q the maximum aerodynamic pressure that the vehicle will be feeling um or experiencing rather you can see the uh the vapor now starting to come off of the vehicle and as it heads up to geostationary orbit and we have about 90 more seconds to go here before we have Beast Biko or booster engine cutoff which will be the moment where these side boosters leave
-(52:34) the Santa Claw alone and prepare for impacting the ocean or can heavy now just becoming a little less easy to hear as it heads down range the uh you can see the plume expanding uh quite considerably that now because of the uh lower density in the upper parts of the atmosphere the flame coming out the bottom of the engine at the bottom of the vehicle is being uh isn't being pushed in as much so you know you can really see it now start to expand out as it heads up in altitude is that Max tracking I think it might be uh this definitely
-(53:14) isn't there's a SpaceX as a there's a spacex's track but just a really a proper fiery red cargo coming out the bottom of Falcon heavy with a little bit of green in there too um as we're heading up into orbits Biko up next coming up shortly both of those look at this absolutely beautiful absolutely incredible views here Biko up shortly the uh Cycles will shut down and then separate from the center core which itself will continue up in to space before dropping off the second stage are we enjoying the color there oh it's
-(53:49) beautiful look at this look at that fiery red mixed with some like greens as well as the as Biko is now upon us and the boosters are separating off of the side core yeah you're gonna get quite a show there's still some golden sunlight right behind me look at this guy um the you can really start to see the jellyfish starting to uh form there with the sunlight bouncing off the top of the or uh shining through the upper atmosphere um because it's set on the ground but because of the increase in altitude it's
-(54:25) yet to set technically I guess um at the location which Falcon heavy currently is the um I mean just look at that the trail really really visible there from Falcon heavy just absolutely incredible the sunset uh colors shining through the plume of where the vehicle has been and then the deep dark blue sky behind it that Justice you all I don't know the full plume is going from a light blue to a pink to an orange to a yellow and then a shining White yeah the plume the expansion of you can see kind of nine legs coming out the
-(55:11) bottom those are from each of the engines just looks incredible and I think yeah we have now have Miko main engine cut off so the next thing we should see is the startup of the second stage engine which you can see here the answer that you can see the sun on the horizon that is beautiful wow that's a this launches delivering on visuals there you go I think it might be in close uh competition with ussf 67 whether it's the most beautiful Falcon heavy launch later I'm guess what we'll have to do a poll of that in a few days
-(55:47) time to once we've been able to uh let them launch sync in next up is the fairings I'll be popping off and being recovered the only pieces of this launch being recovered and then that will unveil the uh the the three payloads the six and a half ton via sat three and its ride shares to the um uh very very very thin parts of the atmosphere at least compared to on the ground as the second stage reaches over 18 000 kilometers in uh not 18 000 kilometers 18 000 kilometers per hour in velocity 138 kilometers in altitude
-(56:22) and just look at that I think it's that bright dot on the</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 13</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy"> top of the screen the second stage I'm trying to I think that carefully oh wow that's that looks just beautiful that's that's amazing wow yeah you can see the plume of the of the of the uh free Santa Claus still kind of lingering in this in the in the sunset there um the the sun now obscured behind the Earth with the onboard views from the second stage and you can see here and just to point out what's happening right now right now this this first burn
-(56:59) will bring the um yeah bring it into a stable orbit and then the second burn ses2 at 29 minutes and 42 seconds will basically bring the second stage on the trajectory to uh to GTO and then fulfill it to a full geode stationary orbit after four hours and the 22 SEC at 4 hours and 22 minutes sorry and then the satellite is planned to be deployed after 4 hours and 32 minutes from now so really a long Mission here that SpaceX has to perform yeah this is certainly not one for the teams at SpaceX to just oh we've
-(57:40) launched it time to go to bed definitely not one of them uh it's a long endurance time for the teams in mission control and also the satellite customers who are on Board second stage Merlin 1D vacuum still burning bright because there's no sun to um uh overcompensate the camera you can see now as it uh The Very Very Thin Blue Line of atmosphere still visible um and that will be getting even less visible as the second stage flies around the dark side of the planet over seven minutes into flight now still
-(58:20) coming up on Seco one uh the first uh cut off of the second stage that'll come once it's reached its uh parking orbit they called it so we're in a parking orbit and you can see the orbit slowly forming and expanding you can really see how it how it slowly but surely goes longer and longer here and I bet there are some SpaceX Engineers who were really happy that this thing finally took off because this Falcon heavy really didn't want it to launch no it's been lingering on 39a for a short while now not only has the
-(58:53) fire sat uh payload been uh and got a bit of a delay on the actual launch date but also the weather not complying in Florida uh uh I'm sure they'll be happy to just get this off the uh ground yeah with the ambitious timeline for this year and like the ambitious gold that Elon Musk has had previously for about 100 launches um having a rocket on a pad for a week or even two that's kind of like rough king of preview and there we have seek uh seeker seeker one and there we go that's his favorite view
-(59:28) on launch day and empty launch pad I was actually looking at the screen this time you can see the uh transport erector the strong back has uh retracted to 45 degrees and um 39a is now uh vacated for the next uh flight uh to uh be rolled out to that pad integrated and then launched because that's the rapid Cadence SpaceX is treating us all to nowadays and you can still see some venting coming off there as well thanks Dad thanks thanks for the shout out there good job I feel like at this point we need like a
-(1:00:02) like an own like Banner for it like death's favorite chart like a like a at the bottom a ticker approved yeah nice looking forward to have that soon you can still see the um uh uh the kind of uh orangey purpley colors here from Fleet cam which is looking a little bit more to the West um well it's looking North technically but I mean you can also see to the West we've been looking to the east um for the vast majority of the time until we had the onboards of uh the second stage uh during the launch we had uh John
-(1:00:38) gifting five red team memberships thanks very much for that John uh if you received one of them make sure to thank John in chat and there we go I think that's a helicopter or something flying in the background there this is the current view from the second stage uh which is uh in its parking orbit uh going 26 and a half thousand kilometers an hour at 164 kilometers in altitude and there you go the empty laun</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 14</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">ch pad Falcon heaviest departed Adrian do we know when the next Falcon heavy will be that's a very good question because we
-(1:01:19) all let's be real we all want to see more Falcon heavy right now that would be probably the USS f-52 Mission which is um lingering around july-ish that's that's like the plan right now we also have accurate staff 24 which would be planned in about August August sorry my German coming through there for a moment and we also of course have psyche right now planning in October and remember psyche has a specific window it has to hit so there's not really a much wiggle room there so psyche might like there's
-(1:01:54) a pretty high chance we will at least see one or two more Falcon Heavies this year coming up because psyche really has to go yeah psyche bat not move again I don't have to deal with rebooking flights uh Julia you were down there what did that look like from your perspective it looked pretty incredible from the cameras but of course nothing beats actually seeing it in person oh it was oh gosh it was beautiful um now if you want to compare that to 67 they are beautiful in different ways this one was definitely more colorful 67
-(1:02:27) that was more full of action so could I tell you I have a favorite yet nope I can't tell you I'm leaning towards 67 but the beauty of this one did you guys hear that by the way that was so loud yeah it sounded like very deep like like I love always the uh the sound of Falcons because Falcons I feel like have this very like deep almost like I don't know it's hard to describe as a sound but I really like it as a sound let's say a deep you feel it in in your chest because yeah you do feel it in your
-(1:03:01) chest from the distance we are at absolutely yeah it's like a little like a chain of um Sonic booms almost like like a lot of a lot of chains of uh very loud sounds but a couple more questions in here which will hit um uh for the moment uh gym guys asking is this the heaviest load ever on a falcon heavy uh Adrian or throw this one to you is this the most massive payload we've ever had uh let me like I'm pretty sure the answer is no but uh I want to verify widgets so let me let me quickly verify what but I I think the like the quick
-(1:03:46) answer is all is pretty much no because I think the most um like a situation here was more that it was complicated because of the orbit and not of the weight the problem is we have I think we have some ussf satellites as well which are fully disclosed and like the mass but I'm also waiting on Alex maybe to weigh in on this but I think it's hard to say with us as f67 and 44.
-(1:04:15) um if this was the heaviest I think you yeah I think you're certainly going to get the uh a star for effort in uh figuring for time they're Adrian for this year that's the award that's going to be good yeah thank you I'm very good at talking very emptively um while while looking up for answers that's also a commentator Talent you pick up at some point you're like okay I really need to look this up because not every number ever used in space flight is actually in our hand I wish we had
-(1:04:42) that every number in our head everyone that's our secret that's what they're about to believe Adrian that's like but once they talk with you in real life they're like oh wait this person does not have every number there's actually quite a lot of numbers you suddenly sometimes have in your head sometimes it's it's scary what you have in your head in terms of oh I know the statistic um I'll throw it to another question then um oh there's another one here about Peridot white
-(1:05:11) we've established we're not uh too sure what the heaviest is yet so far um uh space Wolf asking because the center core is Expendable is it not as well constructed enough for a launch obviously but not as well built as a side court or a falcon 9. uh Julia is there any change in construction because it because it's expended or is it just not put or does it just not have u</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 15</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">h red fins and Landing eggs and such a uh installed on the side no change in construction it's just missing a few items that we would
-(1:05:44) normally find key to launch day that's all very interesting indeed uh skyrock's asking uh is Falcon heavy still planning to launch Gateway in the late 2024 Adrian uh uh we mentioned earlier we don't have any news on Dragon XL which is currently kind of the commercial resupply cargo for Gateway but do we know about the space station itself well it is still planned the Gateway PPE and Halo are still planned for right now net December 2025 on a falcon heavy yes so that's that's really part of this
-(1:06:21) very high profile manifest that SpaceX has started to build with clock and heavy because at the beginning it was more like slowly assembling Mission but now you have very high profile missions actually flying on it not only with Gateway PPE and Halo but also astrobatics lunar Mission 3 and last but not least the Roman Space Telescope which is planned to launch on Falcon Falcon heavy net October 2026.
-(1:06:46) so there's really like a lot of high high profile missions coming on this rocket um which is quite exciting I think this is a I I would call this a previously or you would see this manifest on some other rocket companies and now it really moved like this high profile AAA emissions uh to Falcon heavy which I think makes a lot of people at SpaceX very happy to see these these signature missions on their rocket yeah I'd uh certainly throughout the 2010s and such you'd see the big kind of I don't know if NASA has
-(1:07:20) a proper name for them but I'd say like a class big um Premier missions being launched on like Delta IV heavy Atlas 5 from UAA and uh things like that more vehicles that have a lot more flight history within within like the US Air Force and such from the from the 60s that have developed over time into what they've become today which of course both are now going to get replaced with Vulcan fingers crossed the first flight if that will be coming this year yeah absolutely I I think if you would read the Manifest of of um Falcon heavy
-(1:07:52) to somebody in the year 2010 uh they would say oh cool what a Ula is launching now I I actually think that but without it throwing any shade to your light but like it's a very typical manifest that you would connect to a company like you are and I think it's a it's a testament to SpaceX developing Falcon heavy that they managed to pick up such a high profile manifest uh Dan asking uh uh they expended the boosters uh at uh 164 kilometers 26 000 kilometers per hour how does this compare to when uh they recover the
-(1:08:29) boosters uh Adrian I don't know if you have the numbers in your head or if we can get them in the back Channel um about the recovery of the boosters but uh obviously they don't deplete themselves in terms of fuel because they need the field to come back don't they yeah they have a few lefts for two to three Burns basically there's the Boost back burn which doesn't have to happen um you also have the uh entry burn which happens all the time and the landing burn so the cheeky answer here to give
-(1:08:57) is like the speed compared to landed boosters landed booster stop at zero um however you you can now answer very cheekily well um an expanded booster also at some point reaches zero so there's a bit of a I I'm having a internal debate with myself here right now mm-hmm um so the the way we kind of have to answer this question is the the second stage is at the same point it would be at if this wasn't a um expanded mission but the second stage will now have more propellants and therefore more Delta V Delta velocity
-(1:09:40) because more of the grunt to get it to that parking orbit was used by the center core and the side course because the cycles and the center core aren't being reused so essentially the a bigger portion of that initial ride up into orbit has now been used up by the first stages and not by the sec</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 16</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">ond stage giving the second stage more potential to do more stuff now it is in that parking orbit so whatever the values are for that equation which I just managed to make up out of thin air that is the answer to your question
-(1:10:15) actually sorry I can really recommend uh experiencing a bit with this in Kerbal I I really think that's a good way to understand how this works in terms of how much energy you have on the first or second stage because there's there's cool mods and cool plugins to develop reusable rockets and Kerbal where you propulsively land them and the main thing I had to understand when I started doing that in my my private safe because I was just interested to doing it it's like there's a very sweet spot for a
-(1:10:46) certain mission where to cut off the first stage and use my second stage and it's a really interesting thing to move around left to right and right to left because you really get a feeling uh what what is really the goal here and um yeah I think it was a very very fun experiment to do and I can really highly recommend if you're ever interested in your usability and KSP um it's really with a lot of mods it's a lot of fun to reuse Rockets there a question here from Kyla asking is it possible that SpaceX uses older Merlins
-(1:11:21) on other boosters for expendable Expendable missions uh like this um Julia do we have any idea on if older Merlins are put on or engines are swapped around boosters because um at least from looking on like at the port and from the public side it just kind of seems like they pick up the booster off the Drone ship put it put it on their um transporter and then just take it to the hangar for a bit of a cleanup and a refurb you are actually very correct about that so essentially the the Merlin's that are on the booster stay with the booster
-(1:11:53) unless during refurb uh or data recovered from uh the previous launch says that a Merlin maybe needs to be swapped out and in all honesty the only time we can kind of tell maybe when a Merlin was swapped out is if they take a booster and they static fire it when we don't normally expect the static fire so yeah like you said they pretty much come with the package they stay with the booster and if need be they can swap them out easy enough but they don't swap them amongst each other as far as I've ever
-(1:12:29) seen mm-hmm uh good look here for some some more questions if you have a question and you want to try and answer it to the best of our abilities with our uh our uh crude equations like the one I just came up with tagasencha and that's a space flight um and we'll give it a go uh uh James asking due to the high acceleration was Max Q significantly more intense uh than a less powerful launch I launched up wasn't fully expended Adrian uh do you think Max Q would have been more intense or or does it change depending on velocity how did
-(1:13:07) how does Max Q work tell me everything about aerodynamics oh yeah it's a totally easy topic to answer because aerodynamics are such an easy and well one sentence go yeah just one sentence but no um well I don't think the acceleration is necessarily like bigger here it's more like the booster spurn longer and take more off the second stage up from like the duration of their burn as we uh talked about before the second stage room was shorter uh because the the first stage burned longer so I do not think based on the fact that Max Q is a
-(1:13:39) very uh yes you don't want to you don't want to modify and play around a lot with your max Q usually so I think the profile up to Max q and Beyond would be pretty much the same the question is just where the first stage cuts off and when the boosters cuts off and where the Center Court cuts off but it's I I don't think it has any to do with the acceleration they just accelerate longer which still gives you more acceleration but not by they can they there's a certain limit how much you can throttle
-(1:14:10) a Merlin up and they won't they t</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 17</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">hey usually reach that a lot of times during flight mm-hmm um Alex tagonist in the back channel that the second stage fired for about four minutes on this flight um which is uh the shortest uh orbital insertion ban ever for a Falcon's second stage uh less than four actually um and then I I hate to say this but your bog standard starlink I mean it's incredible that it's become bog standard now uh but that's kind of essentially what they've become um it's about six minutes to get a a set
-(1:14:45) of Starlings up into its parking orbit uh depending on uh whatever shell it's being sent to and what type of if it's V 1.5 V2 numbers change roughly on average six minutes ish so you can see it's a big reduction in second stage burn time um which just goes to show the amount of grunt put in by the first stage is much more because they don't need to they can spend the fuel on getting the payload into a parking orbit rather than having to spend a fuel on a Boost back burn and an entry burn and then again done on
-(1:15:19) organic zone or a drone ship so it's just a matter of using your fuel for different purposes if you use your fuel to get your payload into orbit your second stage has to do less work if you use your field to bring the first stage back the second stage has to do more work it's a um where do you want to use a fuel is essentially what that equation is um to work out that number by the way uh we got some numbers from Danny here in our back Channel ussf 67 had Biko at about 6 000 kilometers an hour and Mikko
-(1:15:48) at 10 000 kilometers an hour for this flight Biko was at 14.5 killed 2 000 kilometers an hour and Mikko at 17 000 kilometers an hour so way more energy there being uh beings provided by the first stage here that's uh that's that's quite impressive yeah so literally the the end point of that flight was spent all the way up to the end getting as much velocity as possible and those that's uh pretty much it's over a doubling in terms of Biko and cut off velocity and um just under double Miko velocity
-(1:16:31) um so there you go I'd say pretty much on average about twice as fast at the point of a booster and jakartoff and Main engine cut off sorry I I just saw this this is one of my favorite metal prints in the story and I love oh yeah of course it's like it's very special design it's a very wide and I think it's one of the best uh prints we have in the store so I always want when we see that I'm like I'm very happy to see it because it's a very very cool design and uh oh somebody's
-(1:17:04) shopping metal prints here uh good choice good choice thank you I think I think I've got them uh uh we've got a couple in here from Andrew buying off the store thanks very much for that um Andrew uh oh get it again a Starship metal print um I think is that photo from Jack I'm not too sure I'd have to look on the store to see um I think that's right people from where the angle where Jack was uh starting off it's remote maybe uh and of course the uh Starship orbital flight test sticker um the patch design
-(1:17:36) and um uh ARP uh asking um uh how much extra mass does this from the previous right side I know you asked us here earlier we did kind of answer at the same time um but many more people may have joined by now so Julia I'll throw this one to you again uh does sit on the booster impact the mass aerodynamics anything like that um no no it it is very minimal if it does impact it uh it's not until that booster has flown well into the double digits and all they need to do is make a slight change to the uh the oh it's been a long day uh to the
-(1:18:22) flight profile and and it's good to go so it's so subtle though that that we wouldn't really catch it um so short answer is nope leave the city booster alone let it be unique it's lovely just the way it is and a lot less work to turn them around huh you need a pretty big pressure washer in order to scrub that whole thing down and I can say the scrub word now because it's launc</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 18</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">hed so I know Alex is about to moan at me for using the s word but it's launched so it doesn't matter anymore
-(1:18:58) yeah we just mentioned like we just saw engine shows starting but SpaceX is no longer showing it yeah there we go there's that's engine chill they're chilling the mvac engine in preparation for ignition because they still need to chill it's uh it's not something they only do once they still need to do it again now for reignition just in case it's a warmed up at all in the uh well in this case on the dark side of the planet over Africa just passing over Gabon I think testing my African
-(1:19:31) geography yet again um but it'll be exiting the African continent over Madagascar there you go views of the Merlin 1D vacuum again on the second stage one minute until ses2 which is the second startup of the Merlin vac which will then bring it to kind of Geo basically it's the that would be a way you went to uh for a GTO and it will once again burn then once it reached that point to make it a full Geo uh mile have has a good question here asking uh uh I'll rephrase this too are the cameras live during expended booster
-(1:20:13) plummet uh will SpaceX share those views I'd love to see the terminal velocity views Adrian if they're expending I don't think that's really shared with us I imagine they'll keep all that data up until the final point where they lose contact but I don't really think they want to share that with the public yeah there might be a situation where they don't want to show like all the parts flying around because that could be easily be something they don't want to show um that's at least how I imagine it also
-(1:20:38) I would imagine like once it starts to break up it probably loses contact pretty quickly because we once you start seeing like like once Parts start to leave the booster that's usually where it reaches its limit and it will just fly around and there we have it SCS to the second stage igniting again for two minutes and five seconds you can really see the the nozzle glowing now as we are half an hour after launch from launch complex 39a in Florida uh so after this looking at the Timeline here uh the second engine uh second
-(1:21:20) engine cut off will occur um Second Stage engine cutoff will occur rather and then it's a bit of a coast it's a roughly a four hour coaster until a second engine start three um and then that lasts for a minute or so until that cuts off again and then about 10 minutes after cco3 uh the primary payload for this Mission the six and a half ton viasap 3 America's will deploy and then uh after that the two ride shares gravity spaces gs1 will then deploy and astronus's uh micro Geo satellite will deploy a few minutes
-(1:21:55) after that those roughly uh about six minutes separated from one another um and uh there you go uh they've lost signal the second stage will of course keep going uh that is of course expected um and there you go empty Launchpad Falcon Heavy's Departed I'm just going to thank everyone who's been involved in this broadcast at the top of the list here we have Adrian thanks for coming on Adrian thanks for having me and as always I will make sure there to thank our chat moderators who stick around with us here
-(1:22:27) and make sure the chat is well behaved and moderated thank you a lot a lot chat mods and we've also had in the field we've had Julia yes it was a wonderful launch and well worth the wait and I want to thank our viewers for joining us for a third time to see this one successfully get off the pad that's almost a charm for Via sat 3.
-(1:22:55) there you go Fiesta three third time it'll it'll it all matches in the end also uh in the field we've had a Max who's been uh on the manual track uh bringing us uh some of those launch views live uh half an hour ago in the background we've also had Kevin pushing the buttons making the photons flow um helping to bring this uh to you uh Das also popped in and told me to look at the screen and of cou</div></div><div class="sc-gueYoa iofbxp"><div class="sc-dmqHEX Woucl"><h3>Part : 19</h3><button color="plain" class="sc-beqWaB cXDGbS">Copy</button></div><div class="sc-hLseeU lhyIXy">rse I've been Ryan Clayton your host for today's show bringing you Falcon heavy the first
-(1:23:25) fully Expendable Falcon heavy excluding the fairings so don't talk about the fairings um with via sat 3 Americas so with that let's wrap it up thanks for watching Everybody we'll see you later goodbye and here we go [Music] foreign [Music] pressure looks good afternoon [Music] [Music] we rise together back to the moon and
-(1:24:29) Beyond exceptions [Music] we don't need any more of these [Music]
-</div></div></div>
 
+
+
+
+/* Body */
+body{
+ position:fixed;
+ left:2px;
+ top:835px;
+ min-height:1548px;
+ height:1669px !important;
+ margin-top:3px;
+ bottom:10px;
+}
+
+/* Heading */
+h1{
+ display:none;
+}
+
+/* Label */
+#myForm label{
+ top:-877px !important;
+ position:relative;
+ bottom:auto !important;
+ width:35% !important;
+}
+
+/* Button */
+#myForm button{
+ min-height:110px;
+ height:110px !important;
+ width:88px !important;
+ left:20px;
+ transform:translatex(251px) translatey(-280px) !important;
+ top:10px !important;
+ bottom:auto !important;
+}
+
+/* Label */
+#myForm label:nth-child(7){
+ top:-897px !important;
+ bottom:auto !important;
+ left:29px !important;
+ right:auto !important;
+}
+
+/* Label */
+#myForm label:nth-child(3){
+ top:-916px !important;
+ bottom:auto !important;
+}
+
+/* Stream deck */
+.stream-deck{
+ top:56px;
+ left:-8px;
+ transform:translatex(762px) translatey(-3120.5px);
+}
+
+/* Form */
+#myForm{
+ top:-2134px !important;
+ bottom:auto !important;
+}
+
+/* Chat area */
+#chatArea{
+ transform:translatex(-940px) translatey(880.6px);
+ top:-465px;
+ left:1728px;
+}
+
+/* Video input */
+#videoIdInput{
+ top:-72px;
+ left:417px;
+ transform:translatex(-1280px) translatey(-1907px) !important;
+}
+
+/* Button */
+form button{
+ transform:translatex(-279px) translatey(-1594px) !important;
+}
+
+/* Label */
+form:nth-child(10) label{
+ left:-57px !important;
+ right:auto !important;
+ top:-844px !important;
+ bottom:auto !important;
+}
+
+/* Message input */
+#messageInput{
+ transform:translatex(44px) translatey(-2612px);
+}
+
+/* Button */
+button:nth-child(13){
+ transform:translatex(68px) translatey(-2622px);
+}
+
+/* Create buttons button */
+#createButtonsButton{
+ top:4px !important;
+ bottom:auto !important;
+}
+
+/* Image */
+img{
+ transform:translatex(591px) translatey(-997px);
+}
+
+/* Control button */
+#controlButton{
+ transform:translatex(-197px) translatey(-3424px);
+ left:-8px;
+}
+
+/* Form Division */
+form{
+ top:-640px !important;
+ bottom:auto !important;
+}
+
+/* Text */
+#text{
+ transform:translatex(138px) translatey(47px) !important;
+}
+
+/* File name */
+#fileName{
+ left:58px;
+ top:-39px;
+}
+
+/* Save */
+#saveBtn{
+ left:175px;
+ top:-2px;
+}
+
+/* Input */
+form:nth-child(9) input[type=text]{
+ transform:translatex(153px) translatey(3px) !important;
+ left:-88px;
+}
+
+/* Input */
+form:nth-child(9) input:nth-child(3){
+ transform:translatex(159px) translatey(4px) !important;
+ top:-14px;
+ left:-72px;
+}
+
+/* Input */
+form:nth-child(9) input[type=file]{
+ top:-45px;
+ left:-43px;
+}
+
+/* Label */
+#myForm label:nth-child(5){
+ top:-889px !important;
+ bottom:auto !important;
+}
+
+/* Play button */
+#play-button{
+ transform:translatex(-80px) translatey(-3379px);
+}
+
+/* Pause button */
+#pause-button{
+ transform:translatex(-74px) translatey(-3381px);
+}
+
+/* Button */
+form:nth-child(10) button{
+ transform:translatex(-1369px) translatey(-2018px) !important;
+}
+
+@media (min-width:768px){
+
+ /* Label */
+ #myForm label{
+  transform:translatex(-25px) translatey(894px) !important;
+ }
+ 
+ /* Label */
+ #myForm label:nth-child(5){
+  transform:translatex(-27px) translatey(831px) !important;
+ }
+ 
+ /* Label */
+ #myForm label:nth-child(7){
+  transform:translatex(-22px) translatey(807px) !important;
+ }
+ 
+ /* Form */
+ #myForm{
+  left:147px !important;
+  right:auto !important;
+  transform:translatex(784px) translatey(-1409px) !important;
+ }
+ 
+ /* Body */
+ body{
+  height:1426px;
+ }
+ 
+ /* Player */
+ #player{
+  top:-737px;
+ }
+ 
+ /* Speaker form */
+ #speakerForm{
+  transform:translatex(568px) translatey(-528px) !important;
+ }
+ 
+ /* Label */
+ form:nth-child(10) label{
+  transform:translatex(-881px) translatey(-1086px) !important;
+ }
+ 
+ /* Num speakers */
+ #numSpeakers{
+  transform:translatex(40px) translatey(-2286px);
+ }
+ 
+ /* Create buttons button */
+ #createButtonsButton{
+  transform:translatex(32px) translatey(-2657px);
+  left:15px;
+ }
+ 
+ /* Image */
+ img{
+  left:29px;
+ }
+ 
+ /* Form Division */
+ form{
+  left:53px !important;
+  transform:translatex(1365px) translatey(-980px) !important;
+ }
+ 
+ /* Text */
+ #text{
+  left:-78px;
+ }
+ 
+ /* Form Division */
+ form:nth-child(7){
+  transform:translatex(1426px) translatey(-1129px) !important;
+  left:-142px !important;
+  right:auto !important;
+ }
+ 
+ /* File */
+ #myFile{
+  left:-72px;
+  top:-38px;
+ }
+ 
+ /* Buttons */
+ #buttons{
+  transform:translatex(-42px) translatey(-2652px);
+ }
+ 
+ /* Form Division */
+ form:nth-child(10){
+  position:sticky;
+ }
+ 
+}

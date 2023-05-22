@@ -1,0 +1,75 @@
+/* Styling for form 1 */
+#form1 select {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #form1 input[type="text"] {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #form1 button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Styling for form 2 */
+  #form2 select {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #form2 input[type="text"],
+  #form2 input[type="email"] {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #form2 textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #form2 button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Additional CSS styles for both forms */
+  /* ... */
+  

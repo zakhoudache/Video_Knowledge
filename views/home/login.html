@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  /* Paragraph */
+p{
+ width:17% !important;
+ position:relative;
+ left:327px;
+ transform:translatex(406px) translatey(15px);
+}
+
+/* Button */
+#loginForm button{
+ position:relative;
+ top:11px;
+}
+
+
+</style>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<body>
+  <h1>Login Page</h1>
+  <form id="loginForm" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="/register">Register here</a></p> <!-- Link to register.html -->
+
+</body>
+<script>
+  const socket = io();
+  async function getSessionUsername() {
+  try {
+    const response = await fetch('/api/getSessionUsername');
+    const data = await response.json();
+    const username = data.username;
+    return username;
+  } catch (error) {
+    console.error('Error retrieving session username:', error);
+    return null;
+  }
+}
+ 
+const loginForm = document.getElementById('loginForm');
+
+loginForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  try {
+    const response = await fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    if (response.ok) {
+      console.log(response);
+      // Login successful, retrieve the session username
+      const sessionUsername = await getSessionUsername();
+
+      if (sessionUsername) {
+        socket.emit('login', sessionUsername); // Pass the username to the server when emitting the login event
+        window.location.href = '/main';
+      } else {
+        console.error('Session username not found');
+      }
+    } else {
+      console.error('Invalid username or password');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+});
+</script>
+
+</html>
