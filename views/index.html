@@ -1,34 +1,125 @@
-<!DOCTYPE html>
+
 <html>
-<head>
+    <head>
+
+    </head>
     <style>
-        #floatingDiv {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #f1f1f1;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            display: none;
-        }
+        /* Form styling */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Label styling */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Input field styling */
+form input[type="text"],
+form input[type="date"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Button styling */
+form button[type="submit"] {
+  background-color: #06beb6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+  background-color: #48b1bf;
+}
+
+/* Optional: Additional styling for specific form elements */
+
+/* Adjust select dropdown width */
+form select {
+  width: 100%;
+}
+
+/* Adjust textarea height */
+form textarea {
+  height: 100px;
+}
+
+/* Adjust label position for left-aligned labels */
+form .u-label-left {
+  text-align: left;
+}
+
+/* Adjust form container width */
+.u-section-1 .u-sheet .u-gradient form {
+  max-width: 600px;
+}
+
+/* Adjust form container position */
+.u-section-1 .u-sheet .u-gradient form {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
     </style>
-</head>
-<body>
-    <input type="text" id="textInput">
-    <button onclick="displayText()">Send</button>
-    <div id="floatingDiv" class="floating-textarea"></div>></div>
+    <body>
+        <form id="form1">
+            <label for="selectLocation1">Select Location</label>
+            <select id="selectLocation1" name="selectLocation">
+              <option value="Massey's">Massey's</option>
+              <option value="Production Site">Production Site</option>
+              <option value="Launch Site">Launch Site</option>
+              <option value="Sanchez">Sanchez</option>
+            </select>
+            <label for="Reference-input1">Reference</label>
+            <input type="text" id="Reference-input1" name="Reference-input">
+            <label for="Destination-input1">Destination</label>
+            <input type="text" id="Destination-input1" name="Destination-input">
+            <label for="Payload-input1">Payload</label>
+            <input type="text" id="Payload-input1" name="Payload-input">
+            <label for="TimeDate-input1">Date</label>
+            <input type="text" id="TimeDate-input1" name="TimeDate-input">
+            <button type="submit">Submit</button>
+          </form>
+          
+          <form id="form2">
+            <label for="selectLocation2">Select Location</label>
+            <select id="selectLocation2" name="selectLocation">
+              <option value="Massey's">Massey's</option>
+              <option value="Production Site">Production Site</option>
+              <option value="Launch Site">Launch Site</option>
+              <option value="Sanchez">Sanchez</option>
+            </select>
+            <label for="Reference-input2">Reference</label>
+            <input type="text" id="Reference-input2" name="Reference-input">
+            <label for="Destination-input2">Destination</label>
+            <input type="text" id="Destination-input2" name="Destination-input">
+            <label for="Payload-input2">Payload</label>
+            <input type="text" id="Payload-input2" name="Payload-input">
+            <label for="TimeDate-input2">Date</label>
+            <input type="text" id="TimeDate-input2" name="TimeDate-input">
+            <button type="submit">Submit</button>
+          </form>
 
-
-    <textarea _ngcontent-ng-c207928905="" rows="1" matinput="" cdktextareaautosize="" cdkautosizeminrows="1" cdkautosizemaxrows="12" aria-label="Input for prompt text" placeholder="Enter a prompt here" class="mat-mdc-input-element cdk-textarea-autosize ng-tns-c2876826087-2 ng-valid gmat-mdc-input mat-mdc-form-field-textarea-control mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored ng-dirty ng-touched" enterkeyhint="send" maxlength="10000" id="mat-input-0" aria-invalid="false" aria-required="false" style="min-height: 15px; max-height: 180px; height: 24px;"></textarea>
-    <script>
-        function displayText() {
-            var inputText = document.getElementById('textInput').value;
-            var floatingDiv = document.getElementById('floatingDiv');
-            floatingDiv.innerText = inputText;
-            floatingDiv.style.display = 'block';
-        }
-    </script>
-</body>
+    </body>
 </html>
+
+  
