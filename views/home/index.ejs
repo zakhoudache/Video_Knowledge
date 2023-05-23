@@ -4345,27 +4345,29 @@ body{
 
   <button type="submit">Submit</button>
 </form> -->
-<form id="form1">
-  <label for="selectLocation1">Select Location</label>
-  <select id="selectLocation1" name="selectLocation">
-    <option value="Massey's">Massey's</option>
-    <option value="Production Site">Production Site</option>
+<form id="form1" action="/api/location/videoId/username" method="POST">
+  <label for="selectLocation1">Select Location:</label>
+  <select id="selectLocation1" name="selectLocation1">
     <option value="Launch Site">Launch Site</option>
+    <option value="Production Site">Production Site</option>
+    <option value="Massey's">Massey's</option>
     <option value="Sanchez">Sanchez</option>
   </select>
-  <label for="Reference-input1">Reference</label>
-  <input type="text" id="Reference-input1" name="Reference-input">
-  <label for="Destination-input1">Destination</label>
-  <input type="text" id="Destination-input1" name="Destination-input">
-  <label for="Payload-input1">Payload</label>
-  <input type="text" id="Payload-input1" name="Payload-input">
-  <label for="TimeDate-input1">Date</label>
-  <!-- <input type="text" id="TimeDate-input1" name="TimeDate-input"> -->
-  <input type="datetime-local" id="TimeDate-input1" name="TimeDate-input">
+
+  <label for="Reference-input1">Reference:</label>
+  <input type="text" id="Reference-input1" name="reference" required>
+
+  <label for="Payload-input1">Payload:</label>
+  <input type="text" id="Payload-input1" name="payload" required>
+
+  <label for="TimeDate-input1">Time and Date:</label>
+  <input type="datetime-local" id="TimeDate-input1" name="timedate" required>
+
+  <label for="Destination-input1">Destination:</label>
+  <input type="text" id="Destination-input1" name="destination" required>
 
   <button type="submit">Submit</button>
 </form>
-
 <form id="form2">
   <label for="selectLocation2">Select Location</label>
   <select id="selectLocation2" name="selectLocation">
